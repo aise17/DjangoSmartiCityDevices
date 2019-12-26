@@ -1,0 +1,117 @@
+version: "3.7"
+
+services:
+
+  nginx:
+    build: ./docker/dockerfiles/nginx
+    restart: always
+    hostname: "nginx"
+    volumes:
+      - "./docker/volumes/nginx/mysite.template:/etc/nginx/conf.d/"
+      - "./DjangoSmartiCityDevices/static:/static"
+    ports:
+      - "8080:80"
+    environment:
+      - NGINX_HOST=foobar.com
+      - NGINX_PORT=80
+    command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
+    networks:
+      - frontend
+      - backend
+    links:
+      - django
+
+
+  django:
+    build:
+      context: .
+      dockerfile: ./docker/dockerfiles/django/Dockerfile
+    ports:
+    - "8000:8000"
+    hostname: "django"
+    restart: always
+    volumes:
+    - "./docker/volumes/django/logs:/var/log"
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && gunicorn DjangoSmartiCityDevices.wsgi -b 0.0.0.0:8000"
+    links:
+    - redis-server
+    - postgresql
+    - celery
+    - rabbitmq
+    networks:
+      - backend
+
+  celery:
+    build:
+      context: .
+      dockerfile: ./docker/dockerfiles/celery/Dockerfile
+    restart: always
+    hostname: "celery"
+    command:  celery -A DjangoSmartiCityDevices worker -l info
+
+    volumes:
+    - "./docker/volumes/django/logs:/var/log"
+    networks:
+      - backend
+
+
+  flower:
+    build:
+      context: .
+      dockerfile: ./docker/dockerfiles/celery/Dockerfile
+    restart: always
+    hostname: "celery"
+    command:  celery flower -A DjangoSmartiCityDevices
+    ports:
+    - "8020:5555"
+    volumes:
+    - "./docker/volumes/django/logs:/var/log"
+    networks:
+      - backend
+
+  postgresql:
+    build: ./docker/dockerfiles/postgresql
+    hostname: "postgresql"
+    restart: always
+    networks:
+      - backend
+    ports:
+      - "5432:5432"
+    volumes:
+      - "./docker/volumes/postgresql/logs:/var/log"
+      - "./docker/volumes/postgresql/config:/var/run/postgres/postgres.sock"
+      - "./docker/volumes/postgresql/data:/var/lib/postgresql/data"
+
+  redis-server:
+    build: ./docker/dockerfiles/redis
+    hostname: "redis-server"
+    volumes:
+      - "./docker/volumes/redis_server/logs:/var/log"
+      - "./docker/volumes/redis_server/config:/usr/local/etc/redis/"
+    networks:
+      - backend
+    ports:
+      - "6379:6379"
+    restart: always
+
+  rabbitmq:
+    build:  ./docker/dockerfiles/rabbitmq
+    hostname: "rabbitmq"
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "8010:15672"
+      - "5672:5672"
+    networks:
+      - backend
+
+
+networks:
+  frontend:
+    name: custom_frontend
+  backend:
+    name: custom_backend
+
