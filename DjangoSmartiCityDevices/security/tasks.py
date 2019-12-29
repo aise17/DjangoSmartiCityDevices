@@ -24,3 +24,5 @@ def xsum(numbers):
 def celery_task(counter):
 
     return '{} Done!'.format(counter)
+
+

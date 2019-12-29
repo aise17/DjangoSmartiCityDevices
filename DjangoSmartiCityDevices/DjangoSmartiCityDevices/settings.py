@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'djcelery',
     'django_extensions',
     'security',
+    'beats',
 ]
 
 MIDDLEWARE = [
@@ -86,6 +87,7 @@ DATABASES = {
         'USER': 'docker',
         'PASSWORD': 'docker',
         'HOST': 'postgresql',
+        #'HOST': 'localhost',
         'PORT': 5432,
     }
 }

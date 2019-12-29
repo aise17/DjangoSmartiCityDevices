@@ -12,6 +12,12 @@ body {
  * Sidebar
  */
 
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+
+
 .sidebar {
   position: fixed;
   top: 0;

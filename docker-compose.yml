@@ -55,6 +55,18 @@ services:
     networks:
       - backend
 
+  worker-betas:
+    build:
+      context: .
+      dockerfile: ./docker/dockerfiles/worker-beats/Dockerfile
+    restart: always
+    hostname: "worker-betas"
+    command:  python worker-beats.py
+    volumes:
+      - "./DjangoSmartiCityDevices:/code/"
+      - "./docker/volumes/worker-beats/logs:/var/log"
+    networks:
+      - backend
 
   flower:
     build:
@@ -94,6 +106,8 @@ services:
     ports:
       - "6379:6379"
     restart: always
+    depends_on:
+      - rabbitmq
 
   rabbitmq:
     build:  ./docker/dockerfiles/rabbitmq
