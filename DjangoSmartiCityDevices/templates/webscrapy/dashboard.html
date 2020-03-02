@@ -1,0 +1,481 @@
+{% extends "webscrapy/navbar.html" %}
+
+{% block content %}
+<div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+
+<div class="d-flex justify-content-between">
+    <div class="col-sm-12">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard v1</li>
+        </ol>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="card text-white bg-primary col m-2 w-3">
+            <div class="card-body text-primary p-7">
+                <h5 class="card-title">
+                    <canvas class="my-4 chartjs-render-monitor" id="myChart" width="1045" height="241" style="display: block; width: 545px; height: 41px;"></canvas>
+                </h5>
+                <small class="card-text text-white">Total de empresas</small>
+                <h1 class="card-text text-white">{{ total_empresas }}</h1>
+            </div>
+        </div>
+
+        <div class="card text-white bg-success 1 col m-2 w-3">
+            <div class="card-body text-primary">
+                <h5 class="card-title">
+                    <canvas class="my-4 chartjs-render-monitor" id="myChartA" width="1045" height="241" style="display: block; width: 545px; height: 41px;"></canvas>
+                </h5>
+                <small class="card-text text-white">Empresas este mes</small>
+                <h1 class="card-text text-white">{{ empresas_mes }}</h1>
+            </div>
+        </div>
+
+        <div class="card text-white bg-danger col m-2 w-3">
+            <div class="card-body text-primary">
+                <h5 class="card-title">
+                    <canvas class="my-4 chartjs-render-monitor" id="myChartB" width="1045" height="241" style="display: block; width: 545px; height: 41px;"></canvas>
+                </h5>
+                <p class="card-text text-white">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<div class="container-fluid ">
+    <div class="row ">
+        <div class="col-7 card mh-5 " id="">
+            {% include "webscrapy/calendar.html" %}
+        </div>
+        <div class="col card ml-3">
+            {% include "webscrapy/list_company.html" %}
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+{% block scripts %}
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+
+
+
+
+<!-- Icons -->
+<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+<script>
+          feather.replace()
+        </script>
+
+<!-- Graphs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<script>
+          var ctx = document.getElementById("myChart");
+          var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              datasets: [{
+                data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                lineTension: 0,
+                backgroundColor: 'transparent',
+                borderColor: '#dce5e6',
+                borderWidth: 4,
+                pointBackgroundColor: '#007bff'
+              }]
+            },
+            options: {
+              scales: {
+                xAxes: [{
+                  display: false,
+                  ticks: {
+                    beginAtZero: false
+                  }
+                }],
+                yAxes: [{
+                  display: false,
+                  ticks: {
+                    beginAtZero: false
+                  }
+                }]
+              },
+              legend: {
+                display: false,
+              }
+            }
+          });
+        </script>
+
+<script>
+          var ctx = document.getElementById("myChartA");
+          var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              datasets: [{
+                data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                lineTension: 0,
+                backgroundColor: 'transparent',
+                borderColor: '#dce5e6',
+                borderWidth: 4,
+                pointBackgroundColor: '#007bff'
+              }]
+            },
+            options: {
+              scales: {
+                xAxes: [{
+                  display: false,
+                  ticks: {
+                    beginAtZero: false
+                  }
+                }],
+                yAxes: [{
+                  display: false,
+                  ticks: {
+                    beginAtZero: false
+                  }
+                }]
+              },
+              legend: {
+                display: false,
+              }
+            }
+          });
+        </script>
+
+
+
+
+<script>
+          var ctx = document.getElementById("myChartB");
+          var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              datasets: [{
+                data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                lineTension: 0,
+                backgroundColor: 'transparent',
+                borderColor: '#dce5e6',
+                borderWidth: 4,
+                pointBackgroundColor: '#007bff'
+              }]
+            },
+            options: {
+              scales: {
+                xAxes: [{
+                  display: false,
+                  ticks: {
+                    beginAtZero: false
+                  }
+                }],
+                yAxes: [{
+                  display: false,
+                  ticks: {
+                    beginAtZero: false
+                  }
+                }]
+              },
+              legend: {
+                display: false,
+              }
+            }
+          });
+        </script>
+
+
+
+<!--AMCHATS-->
+
+
+
+
+
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/maps.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+    am4core.ready(function() {
+
+    // Themes begin
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    // Define marker path
+    var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z M9,15.93 c-3.83,0-6.93-3.1-6.93-6.93S5.17,2.07,9,2.07s6.93,3.1,6.93,6.93S12.83,15.93,9,15.93 M12.5,9c0,1.933-1.567,3.5-3.5,3.5S5.5,10.933,5.5,9S7.067,5.5,9,5.5 S12.5,7.067,12.5,9z";
+
+    // Create map instance
+    var chart = am4core.create("chartdiv", am4maps.MapChart);
+    var interfaceColors = new am4core.InterfaceColorSet();
+
+    // Set map definition
+    chart.geodata = am4geodata_worldLow;
+
+    // Set projection
+    chart.projection = new am4maps.projections.Mercator();
+
+    // Add zoom control
+    chart.zoomControl = new am4maps.ZoomControl();
+
+    // Set initial zoom
+    chart.homeZoomLevel = 2.5;
+    chart.homeGeoPoint = {
+      latitude: 51,
+      longitude: -23
+    };
+
+    // Create map polygon series
+    var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+    polygonSeries.exclude = ["AQ"];
+    polygonSeries.useGeodata = true;
+    polygonSeries.mapPolygons.template.nonScalingStroke = true;
+
+    // Add images
+    var imageSeries = chart.series.push(new am4maps.MapImageSeries());
+    var imageTemplate = imageSeries.mapImages.template;
+    imageTemplate.tooltipText = "{title}";
+    imageTemplate.nonScaling = true;
+
+    var marker = imageTemplate.createChild(am4core.Sprite);
+    marker.path = targetSVG;
+    marker.horizontalCenter = "middle";
+    marker.verticalCenter = "middle";
+    marker.scale = 0.7;
+    marker.fill = interfaceColors.getFor("alternativeBackground");
+
+    imageTemplate.propertyFields.latitude = "latitude";
+    imageTemplate.propertyFields.longitude = "longitude";
+    imageSeries.data = [ {
+      "id": "london",
+      "svgPath": targetSVG,
+      "title": "London",
+      "latitude": 51.5002,
+      "longitude": -0.1262,
+      "scale": 1
+    }, {
+      "svgPath": targetSVG,
+      "title": "Brussels",
+      "latitude": 50.8371,
+      "longitude": 4.3676,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Prague",
+      "latitude": 50.0878,
+      "longitude": 14.4205,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Athens",
+      "latitude": 37.9792,
+      "longitude": 23.7166,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Reykjavik",
+      "latitude": 64.1353,
+      "longitude": -21.8952,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Dublin",
+      "latitude": 53.3441,
+      "longitude": -6.2675,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Oslo",
+      "latitude": 59.9138,
+      "longitude": 10.7387,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Lisbon",
+      "latitude": 38.7072,
+      "longitude": -9.1355,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Moscow",
+      "latitude": 55.7558,
+      "longitude": 37.6176,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Belgrade",
+      "latitude": 44.8048,
+      "longitude": 20.4781,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Bratislava",
+      "latitude": 48.2116,
+      "longitude": 17.1547,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Ljubljana",
+      "latitude": 46.0514,
+      "longitude": 14.5060,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Madrid",
+      "latitude": 40.4167,
+      "longitude": -3.7033,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Stockholm",
+      "latitude": 59.3328,
+      "longitude": 18.0645,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Bern",
+      "latitude": 46.9480,
+      "longitude": 7.4481,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Kiev",
+      "latitude": 50.4422,
+      "longitude": 30.5367,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "Paris",
+      "latitude": 48.8567,
+      "longitude": 2.3510,
+      "scale": 0.5
+    }, {
+      "svgPath": targetSVG,
+      "title": "New York",
+      "latitude": 40.43,
+      "longitude": -74,
+      "scale": 0.5
+    } ];
+
+    // Add lines
+    var lineSeries = chart.series.push(new am4maps.MapLineSeries());
+    lineSeries.dataFields.multiGeoLine = "multiGeoLine";
+
+    var lineTemplate = lineSeries.mapLines.template;
+    lineTemplate.nonScalingStroke = true;
+    lineTemplate.arrow.nonScaling = true;
+    lineTemplate.arrow.width = 4;
+    lineTemplate.arrow.height = 6;
+    lineTemplate.stroke = interfaceColors.getFor("alternativeBackground");
+    lineTemplate.fill = interfaceColors.getFor("alternativeBackground");
+    lineTemplate.line.strokeOpacity = 0.4;
+
+    lineSeries.data = [{
+      "multiGeoLine": [
+        [
+          { "latitude": 51.5002, "longitude": -0.1262 },
+          { "latitude": 50.4422, "longitude": 30.5367 }
+        ]
+      ]
+    }, {
+      "multiGeoLine": [
+        [
+          { "latitude": 51.5002, "longitude": -0.1262 },
+          { "latitude": 40.4300, "longitude": -74.0000 }
+        ]
+      ]
+    }, {
+      "multiGeoLine": [
+        [
+          { "latitude": 51.5002, "longitude": -0.1262 },
+          { "latitude": 64.1353, "longitude": -21.8952 }
+        ]
+      ]
+    }, {
+      "multiGeoLine": [
+        [
+          { "latitude": 51.5002, "longitude": -0.1262 },
+          { "latitude": 37.9792, "longitude": 23.7166 }
+        ]
+      ]
+    }, {
+      "multiGeoLine": [
+        [
+          { "latitude": 51.5002, "longitude": -0.1262 },
+          { "latitude": 38.7072, "longitude": -9.1355 }
+        ]
+      ]
+    }, {
+      "multiGeoLine": [
+        [
+          { "latitude": 51.5002, "longitude": -0.1262 },
+          { "latitude": 55.7558, "longitude": 37.6176 }
+        ]
+      ]
+    }, {
+      "multiGeoLine": [
+        [
+          { "latitude": 51.5002, "longitude": -0.1262 },
+          { "latitude": 44.8048, "longitude": 20.4781 }
+        ]
+      ]
+    }, {
+      "multiGeoLine": [
+        [
+          { "latitude": 51.5002, "longitude": -0.1262 },
+          { "latitude": 48.2116, "longitude": 17.1547 }
+        ]
+      ]
+    }, {
+      "multiGeoLine": [
+        [
+          { "latitude": 51.5002, "longitude": -0.1262 },
+          { "latitude": 46.0514, "longitude": 14.5060 }
+        ]
+      ]
+    }, {
+      "multiGeoLine": [
+        [
+          { "latitude": 51.5002, "longitude": -0.1262 },
+          { "latitude": 40.4167, "longitude": -3.7033 }
+        ]
+      ]
+    }, {
+      "multiGeoLine": [
+        [
+          { "latitude": 51.5002, "longitude": -0.1262 },
+          { "latitude": 59.3328, "longitude": 18.0645 }
+        ]
+      ]
+    }, {
+      "multiGeoLine": [
+        [
+          { "latitude": 51.5002, "longitude": -0.1262 },
+          { "latitude": 46.9480, "longitude": 7.4481 }
+        ]
+      ]
+    }];
+
+    }); // end am4core.ready()
+    </script>
+
+<!-- HTML -->
+{% endblock %}

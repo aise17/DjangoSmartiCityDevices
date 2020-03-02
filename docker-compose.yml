@@ -92,8 +92,8 @@ services:
       - "5432:5432"
     volumes:
       - "./docker/volumes/postgresql/logs:/var/log"
-      - "./docker/volumes/postgresql/config:/var/run/postgres/postgres.sock"
-      - "./docker/volumes/postgresql/data:/var/lib/postgresql/data"
+      - "./docker/volumes/postgresql/config:/etc/postgresql/9.3/main"
+      - "./docker/volumes/postgresql/data:/var/lib/postgresql/9.3/main"
 
   redis-server:
     build: ./docker/dockerfiles/redis

@@ -1,0 +1,13 @@
+
+{% extends "webscrapy/navbar.html" %}
+
+
+
+{% block content %}
+
+ <form method="POST" enctype="multipart/form-data">
+     {% csrf_token %}
+    <input type="file" name="path">
+    <button class="mb-2 btn btn-lg btn-primary btn-block" type="submit">Upload</button>
+ </form>
+{% endblock %}

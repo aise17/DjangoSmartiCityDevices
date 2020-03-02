@@ -1,0 +1,49 @@
+
+<div class=" ">
+
+    <h2>Lista de tareas</h2>
+
+    <div class="container-fluid row ">
+
+        <div class="col">
+                <h4>Completas</h4>
+
+        <div class="list-group " style="  height:440px; overflow-y: scroll; " >
+          {% if lista_empresas %}
+              {% for empresa in lista_empresas %}
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start ">
+                  <div class="d-flex w-100 justify-content-between ">
+                    <h5 class="mb-1"> {{ empresa.name }} </h5>
+                    <small>{{ empresa.create_datetime }}</small>
+                  </div>
+                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  <small>Donec id elit non mi porta.</small>
+                </a>
+              {% endfor %}
+          {% else %}
+                        <p class="mb-1">No hay datos.</p>
+          {% endif %}
+        </div>
+            </div>
+
+                <div class="col">
+                    <h4>Falladas</h4>
+        <div class="list-group " style="  height:440px; overflow-y: scroll;" >
+           {% if lista_empresas %}
+             {% for empresa in lista_empresas %}
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start ">
+                  <div class="d-flex w-100 justify-content-between ">
+                    <h5 class="mb-1"> {{ empresa.name }} </h5>
+                    <small>{{ empresa.create_datetime }}</small>
+                  </div>
+                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  <small>Donec id elit non mi porta.</small>
+                </a>
+              {% endfor %}
+          {% else %}
+            <p class="mb-1">No hay datos.</p>
+          {% endif %}
+        </div>
+    </div>
+    </div>
+</div>

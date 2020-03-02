@@ -1,0 +1,289 @@
+Metadata-Version: 2.1
+Name: pyvalid
+Version: 0.9.2
+Summary: pyvalid is a Python validation tool for checking of input function parameters and return values.
+Home-page: http://uzumaxy.github.io/pyvalid/
+Author: Maxim Grischuk
+Author-email: uzumaxy@gmail.com
+Maintainer: Maxim Grischuk
+Maintainer-email: uzumaxy@gmail.com
+License: BSD
+Download-URL: https://github.com/uzumaxy/pyvalid/releases
+Keywords: pyvalid,valid,validation,type,checking,check,decorator
+Platform: Platform Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows :: Windows 7
+Classifier: Operating System :: Microsoft :: Windows :: Windows NT/2000
+Classifier: Operating System :: Microsoft :: Windows :: Windows Server 2003
+Classifier: Operating System :: Microsoft :: Windows :: Windows Server 2008
+Classifier: Operating System :: Microsoft :: Windows :: Windows Vista
+Classifier: Operating System :: Microsoft :: Windows :: Windows XP
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX :: BSD :: FreeBSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: SunOS/Solaris
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Testing
+Requires-Dist: six (==1.10.0)
+
+pyvalid
+-------
+
+Python validation tool for checking function's input parameters and return values.
+This module can be very helpful on the develop stage of the project, when control for accepted and returned function values is a one of most important things.
+
+Module consists of two decorators: `accepts` and `returns`.
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+`accepts(*accepted_arg_values, **accepted_kwargs_values)`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A decorator for validating types and values of input parameters of a given function.
+You can pass the set of accepted types and values or validation function as decorator's input parameters.
+Validation process can raise the following exceptions:
+
+* `pyvalid.InvalidArgumentNumberError` — when the number or position of arguments supplied to a function is incorrect.
+* `pyvalid.ArgumentValidationError` — when the type of an argument to a function is not what it should be.
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+`returns(*accepted_returns_values)`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A decorator for validating the return value of a given function.
+You can pass the set of accepted types and values or validation function as a decorator's input parameters.
+Validation process can raise `pyvalid.InvalidReturnType` when the return value is not in the collection of supported values and types.
+
+
+How to install
+++++++++++++++
+
+* With PyPI: `pip install -U pyvalid`
+* Manually: `python setup.py install`
+
+
+Example of usage
+++++++++++++++++
+
+Function `calc` in example below has next limitations:
+
+* Can return only int or float value;
+* First parameter must be only of type str;
+* Second parameter must be of type int or equals to 2.0;
+* Third parameter must be of type int or float.
+
+
+.. code-block:: python
+
+    from pyvalid import accepts, returns
+
+
+    @returns(int, float)
+    @accepts(str, (int, 2.0), (int, float))
+    def calc(operator, val1, val2, val3):
+        expression = '{v1} {op} {v2} {op} {v3}'.format(
+            op=operator,
+            v1=val1, v2=val2, v3=val3
+        )
+        return eval(expression)
+
+
+    # Output: 24.
+    print(calc('*', 2, 3, 4))
+
+    # Output: 24.0.
+    print(calc(operator='*', val1=2, val2=3.0, val3=4))
+
+    # Output: 24.0.
+    print(calc('*', 2.0, 3, 4))
+
+    # Raise pyvalid.ArgumentValidationError exception,
+    # because second argument has unsupported value.
+    print(calc('*', 3.14, 3, 4))
+
+
+    # Raise pyvalid.InvalidReturnType exception,
+    # because returns value is of type str.
+    print(calc('*', 2, 3, '"4"'))
+
+
+Here is an example of usage `pyvalid` module in context of classes.
+Pay attention to the method `connect` of the class `SqlDriver`.
+This method is a good demonstration of usage `accepts` decorator for functions with keyword arguments.
+
+.. code-block:: python
+
+    from pyvalid import accepts, returns
+    from collections import Iterable
+
+
+    class SqlDriver(object):
+
+        @returns(bool)
+        @accepts(object, host=str, port=int, usr=str, pwd=str, db=[str, None])
+        def connect(self, **kwargs):
+            connection_string = \
+                'tsql -S {host} -p {port} -U {usr} -P {pwd} -D {db}'.format(**kwargs)
+            try:
+                print('Establishing connection: "{}"'.format(connection_string))
+                # Create connection..
+                success = True
+            except:
+                success = False
+            return success
+
+        @returns(bool)
+        def close(self):
+            try:
+                print('Closing connection')
+                # Close connection..
+                success = True
+            except:
+                success = False
+            return success
+
+        @returns(None, dict)
+        @accepts(object, str, Iterable)
+        def query(self, sql, params=None):
+            try:
+                query_info = 'Processing request "{}"'.format(sql)
+                if params is not None:
+                    query_info += ' with following params: ' + ', '.join(params)
+                print(query_info)
+                # Process request..
+                data = dict()
+            except:
+                data = None
+            return data
+
+
+    sql_driver = SqlDriver()
+
+    conn_params = {
+        'host': '8.8.8.8',
+        'port': 1433,
+        'usr': 'admin',
+        'pwd': 'Super_Mega_Strong_Password_2000',
+        'db': 'info_tech'
+    }
+    sql_driver.connect(**conn_params)
+
+    sql = r'SELECT * FROM ProgrammingLang'
+    pl = sql_driver.query(sql)
+
+    sql = r'SELECT * FROM ProgrammingLang WHERE name=?'
+    python_pl = sql_driver.query(sql, ('Python',))
+
+    sql_driver.close()
+
+
+Following example with class `User` will show you how to use `pyvalid` module to validate some value with using validation function.
+
+.. code-block:: python
+
+    from pyvalid import accepts
+    from pyvalid.validators import is_validator
+
+
+    class User(object):
+
+        class Validator(object):
+
+            unsafe_passwords = [
+                '111111', '000000', '123123',
+                '123456', '12345678', '1234567890',
+                'qwerty', 'sunshine', 'password',
+            ]
+
+            @classmethod
+            @is_validator
+            def login_checker(cls, login):
+                is_valid = isinstance(login, str) and 1 <= len(login) <= 16
+                if is_valid:
+                    for reg_user in User.registered:
+                        if login == reg_user.login:
+                            is_valid = False
+                            break
+                return is_valid
+
+            @classmethod
+            @is_validator
+            def password_checker(cls, password):
+                is_valid = isinstance(password, str) and \
+                    (6 <= len(password) <= 32) and \
+                    (password not in cls.unsafe_passwords)
+                return is_valid
+
+        registered = list()
+
+        def __init__(self, login, password):
+            self.__login = None
+            self.login = login
+            self.__password = None
+            self.password = password
+            User.registered.append(self)
+
+        @property
+        def login(self):
+            return self.__login
+
+        @login.setter
+        @accepts(object, Validator.login_checker)
+        def login(self, value):
+            self.__login = value
+
+        @property
+        def password(self):
+            return self.__password
+
+        @password.setter
+        @accepts(object, Validator.password_checker)
+        def password(self, value):
+            self.__password = value
+
+
+    user = User('admin', 'Super_Mega_Strong_Password_2000')
+
+    # Output: admin Super_Mega_Strong_Password_2000
+    print(user.login, user.password)
+
+    # Raise pyvalid.ArgumentValidationError exception,
+    # because User.Validator.password_checker method
+    # returns False value.
+    user.password = 'qwerty'
+
+    # Raise pyvalid.ArgumentValidationError exception,
+    # because User.Validator.login_checker method
+    # returns False value.
+    user = User('admin', 'Super_Mega_Strong_Password_2001')
+
+
+License
++++++++
+
+Note that this project is distributed under the `MIT License <LICENSE>`_.
+
+
