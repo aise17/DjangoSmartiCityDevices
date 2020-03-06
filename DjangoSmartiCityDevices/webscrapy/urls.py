@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from .views import uploadURL, dashboard
+from .views import uploadURL, dashboard, crawl
 
 urlpatterns = [
     path('uploadURL/', uploadURL, name='uploadURL'),
     path('dashboard/', dashboard, name='dashboard'),
+    path('crawl/', crawl, name='crawl'),
 
 ]
