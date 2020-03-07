@@ -5,8 +5,12 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.htm
 import json
+import sys
 
-from DjangoSmartiCityDevices.webscrapy.models import ScrapyItem
+import os
+sys.path.append(os.path.dirname(os.path.abspath('../../')))
+
+from webscrapy.models import ScrapyItem
 
 
 class ScrapyAppPipeline(object):
