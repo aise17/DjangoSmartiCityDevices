@@ -13,6 +13,7 @@ class IcrawlerSpider(CrawlSpider):
         # To make everything dynamic, we need to override them inside __init__ method
         self.url = kwargs.get('url')
         self.domain = kwargs.get('domain')
+        self.task_id = kwargs.get('task_id')
         self.start_urls = [self.url]
         self.allowed_domains = [self.domain]
 

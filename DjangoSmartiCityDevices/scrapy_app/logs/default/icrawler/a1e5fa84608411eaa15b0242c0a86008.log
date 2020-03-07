@@ -1,0 +1,168 @@
+2020-03-07 15:02:21 [scrapy.utils.log] INFO: Scrapy 2.0.0 started (bot: scrapy_app)
+2020-03-07 15:02:21 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.6 (default, Dec 20 2019, 22:36:14) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Linux-4.19.76-linuxkit-x86_64-with-debian-10.2
+2020-03-07 15:02:21 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2020-03-07 15:02:21 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'scrapy_app',
+ 'LOG_FILE': 'logs/default/icrawler/a1e5fa84608411eaa15b0242c0a86008.log',
+ 'NEWSPIDER_MODULE': 'scrapy_app.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scrapy_app.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (compatible; Googlebot/2.1; '
+               '+http://www.google.com/bot.html)'}
+2020-03-07 15:02:21 [scrapy.extensions.telnet] INFO: Telnet Password: eefa02f95a81055c
+2020-03-07 15:02:21 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-03-07 15:02:21 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-03-07 15:02:21 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-03-07 15:02:21 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_app.pipelines.ScrapyAppPipeline']
+2020-03-07 15:02:21 [scrapy.core.engine] INFO: Spider opened
+2020-03-07 15:02:21 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-03-07 15:02:21 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-03-07 15:02:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.google.es/robots.txt> from <GET http://google.es/robots.txt>
+2020-03-07 15:02:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.google.es/robots.txt> (referer: None)
+2020-03-07 15:02:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.google.es/> from <GET http://google.es>
+2020-03-07 15:02:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.google.es/robots.txt> (referer: None)
+2020-03-07 15:02:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.google.es/> (referer: None)
+2020-03-07 15:02:21 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'play.google.com': <GET https://play.google.com/?hl=es&tab=w8>
+2020-03-07 15:02:21 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'www.youtube.com': <GET http://www.youtube.com/?gl=ES&tab=w1>
+2020-03-07 15:02:21 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'mail.google.com': <GET https://mail.google.com/mail/?tab=wm>
+2020-03-07 15:02:21 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'drive.google.com': <GET https://drive.google.com/?tab=wo>
+2020-03-07 15:02:21 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'www.google.com': <GET https://www.google.com/calendar?tab=wc>
+2020-03-07 15:02:21 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'www.blogger.com': <GET http://www.blogger.com/?tab=wj>
+2020-03-07 15:02:21 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'photos.google.com': <GET https://photos.google.com/?tab=wq&pageId=none>
+2020-03-07 15:02:21 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'docs.google.com': <GET https://docs.google.com/document/?usp=docs_alc>
+2020-03-07 15:02:21 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'accounts.google.com': <GET https://accounts.google.com/ServiceLogin?hl=es&passive=true&continue=http://www.google.es/>
+2020-03-07 15:02:21 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET http://www.google.es/preferences?hl=es>
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.google.es/webhp?tab=ww> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://video.google.es/robots.txt> (referer: None)
+2020-03-07 15:02:22 [protego] DEBUG: Rule at line 7 without any user agent to enforce it on.
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://news.google.es/robots.txt> (referer: None)
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.google.es/imghp?hl=es&tab=wi> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.google.es/intl/es/policies/terms/> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.google.es/intl/es/policies/privacy/> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://translate.google.es/robots.txt> (referer: None)
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://maps.google.es/robots.txt> (referer: None)
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET http://maps.google.es/maps?hl=es&tab=wl>
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.google.es/intl/es/about/> from <GET http://www.google.es/intl/es/about.html>
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://www.google.es/> from <GET http://www.google.es/setprefdomain?prefdom=US&sig=K_nQ_OxidF5KCA0KL1h09HWKcFkug%3D>
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET http://www.google.es/setprefs?sig=0_WIPJVAAvvzhBJEWxIN8fDlbt2FQ%3D&hl=en&source=homepage&sa=X&ved=0ahUKEwjQoYb10IjoAhUox4UKHTOXCzkQ2ZgBCAg>
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET http://www.google.es/setprefs?sig=0_WIPJVAAvvzhBJEWxIN8fDlbt2FQ%3D&hl=eu&source=homepage&sa=X&ved=0ahUKEwjQoYb10IjoAhUox4UKHTOXCzkQ2ZgBCAc>
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET http://www.google.es/setprefs?sig=0_WIPJVAAvvzhBJEWxIN8fDlbt2FQ%3D&hl=gl&source=homepage&sa=X&ved=0ahUKEwjQoYb10IjoAhUox4UKHTOXCzkQ2ZgBCAY>
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET http://www.google.es/setprefs?sig=0_WIPJVAAvvzhBJEWxIN8fDlbt2FQ%3D&hl=ca&source=homepage&sa=X&ved=0ahUKEwjQoYb10IjoAhUox4UKHTOXCzkQ2ZgBCAU>
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://books.google.es/robots.txt> (referer: None)
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.google.es/videohp?hl=es> from <GET http://video.google.es/?hl=es&tab=wv>
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://about.google/intl/es/products?tab=wh> from <GET https://www.google.es/intl/es/about/products?tab=wh>
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.google.es/webhp?tab=ww>
+{'url': 'https://www.google.es/webhp?tab=ww'}
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://ads.google.com/intl/es/home/> from <GET http://www.google.es/intl/es/ads/>
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.google.es/intl/es/services/> from <GET http://www.google.es/intl/es/services/>
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://about.google/intl/es/> from <GET http://www.google.es/intl/es/about/>
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.google.es/advanced_search?hl=es&authuser=0> from <GET http://www.google.es/advanced_search?hl=es&authuser=0>
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://translate.google.es/?hl=es> from <GET http://translate.google.es/?hl=es&tab=wT>
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.google.es/> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://news.google.es/nwshp?hl=es&tab=wn> from <GET http://news.google.es/nwshp?hl=es&tab=wn>
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.google.es/shopping?hl=es&source=og&tab=wf> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.google.es/imghp?hl=es&tab=wi>
+{'url': 'http://www.google.es/imghp?hl=es&tab=wi'}
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.google.es/intl/es/policies/terms/>
+{'url': 'http://www.google.es/intl/es/policies/terms/'}
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.google.es/intl/es/policies/privacy/>
+{'url': 'http://www.google.es/intl/es/policies/privacy/'}
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.google.es/intl/es/services/> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.google.es/history/optout?hl=es> from <GET http://www.google.es/history/optout?hl=es>
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://books.google.es/bkshp?hl=es&tab=wp> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.google.es/videohp?hl=es> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.google.es/advanced_search?hl=es&authuser=0> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.google.es/>
+{'url': 'http://www.google.es/'}
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.google.es/shopping?hl=es&source=og&tab=wf>
+{'url': 'https://www.google.es/shopping?hl=es&source=og&tab=wf'}
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://about.google/robots.txt> (referer: None)
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.google.es/intl/es/services/>
+{'url': 'https://www.google.es/intl/es/services/'}
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ads.google.com/robots.txt> (referer: None)
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://support.google.com/news/publisher-center/answer/9609687?hl=es> from <GET https://news.google.es/nwshp?hl=es&tab=wn>
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://books.google.es/bkshp?hl=es&tab=wp>
+{'url': 'https://books.google.es/bkshp?hl=es&tab=wp'}
+2020-03-07 15:02:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://about.google/intl/es/products/?tab=wh> from <GET https://about.google/intl/es/products?tab=wh>
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://translate.google.es/?hl=es> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.google.es/videohp?hl=es>
+{'url': 'http://www.google.es/videohp?hl=es'}
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.google.es/advanced_search?hl=es&authuser=0>
+{'url': 'https://www.google.es/advanced_search?hl=es&authuser=0'}
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.google.es/history/optout?hl=es> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ads.google.com/intl/es/home/> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://about.google/intl/es/products/?tab=wh> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://about.google/intl/es/> (referer: http://www.google.es/)
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.google.com/robots.txt> (referer: None)
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://translate.google.es/?hl=es>
+{'url': 'https://translate.google.es/?hl=es'}
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.google.es/history/optout?hl=es>
+{'url': 'https://www.google.es/history/optout?hl=es'}
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ads.google.com/intl/es/home/>
+{'url': 'https://ads.google.com/intl/es/home/'}
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://about.google/intl/es/products/?tab=wh>
+{'url': 'https://about.google/intl/es/products/?tab=wh'}
+2020-03-07 15:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://about.google/intl/es/>
+{'url': 'https://about.google/intl/es/'}
+2020-03-07 15:02:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.google.com/news/publisher-center/answer/9609687?hl=es> (referer: http://www.google.es/)
+2020-03-07 15:02:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.google.com/news/publisher-center/answer/9609687?hl=es>
+{'url': 'https://support.google.com/news/publisher-center/answer/9609687?hl=es'}
+2020-03-07 15:02:23 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-03-07 15:02:23 [asyncio] DEBUG: Using selector: EpollSelector
+2020-03-07 15:02:23 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 6,
+ 'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 6,
+ 'downloader/request_bytes': 18090,
+ 'downloader/request_count': 42,
+ 'downloader/request_method_count/GET': 42,
+ 'downloader/response_bytes': 504283,
+ 'downloader/response_count': 42,
+ 'downloader/response_status_count/200': 26,
+ 'downloader/response_status_count/301': 12,
+ 'downloader/response_status_count/302': 3,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 1.566406,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 3, 7, 15, 2, 23, 80363),
+ 'item_scraped_count': 16,
+ 'log_count/DEBUG': 75,
+ 'log_count/INFO': 10,
+ 'memusage/max': 83378176,
+ 'memusage/startup': 83378176,
+ 'offsite/domains': 9,
+ 'offsite/filtered': 9,
+ 'request_depth_max': 1,
+ 'response_received_count': 27,
+ 'robotstxt/forbidden': 6,
+ 'robotstxt/request_count': 10,
+ 'robotstxt/response_count': 10,
+ 'robotstxt/response_status_count/200': 9,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 37,
+ 'scheduler/dequeued/memory': 37,
+ 'scheduler/enqueued': 37,
+ 'scheduler/enqueued/memory': 37,
+ 'start_time': datetime.datetime(2020, 3, 7, 15, 2, 21, 513957)}
+2020-03-07 15:02:23 [scrapy.core.engine] INFO: Spider closed (finished)

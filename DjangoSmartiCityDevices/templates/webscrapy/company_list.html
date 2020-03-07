@@ -1,0 +1,32 @@
+
+{% extends "webscrapy/navbar.html" %}
+
+
+
+{% block content %}
+<div class="tableFixHead">
+
+<table class="table table-scroll">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Url</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody >
+    {% if lista_empresas %}
+      {% for empresa in lista_empresas %}
+        <tr>
+          <th scope="row">{{ empresa.id }}</th>
+          <td>{{ empresa.name }}</td>
+          <td>{{ empresa.url }}</td>
+          <td>{{ empresa.create_datetime }}</td>
+        </tr>
+      {% endfor %}
+    {% endif %}
+  </tbody>
+</table>
+  </div>
+{% endblock %}

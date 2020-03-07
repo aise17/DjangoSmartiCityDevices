@@ -7,10 +7,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from .forms import Uploadfile
-from .models import Company
-
-
-
+from .models import Company, ScrapyTasks
 
 from uuid import uuid4
 from urllib.parse import urlparse
@@ -50,6 +47,7 @@ def uploadURL(request):
                 company.name = line.split('//')[1].split('/')[0]
                 company.url = line
                 company.create_datetime = datetime.now()
+                company.user = request.user
                 company.save()
             #handle_uploaded_file(request.FILES['file'])
             return HttpResponseRedirect('/webscrapy/dashboard/')
@@ -61,15 +59,17 @@ def uploadURL(request):
 def dashboard(request):
     if request.method == 'GET':
 
-        total_empresas = Company.objects.all().count()
-        lista_empresas = Company.objects.all()
+        total_empresas = Company.objects.filter(user=request.user).count()
+        lista_empresas = Company.objects.filter(user=request.user)
+        lista_tareas_scrapy = ScrapyTasks.objects.filter(user=request.user)
 
-        empresas_add_mes = Company.objects.filter(create_datetime__month=datetime.now().month).count()
+        empresas_add_mes = Company.objects.filter(create_datetime__month=datetime.now().month, user=request.user).count()
 
         queryset = {
             'total_empresas': total_empresas,
             'empresas_mes': empresas_add_mes,
-            'lista_empresas': lista_empresas
+            'lista_empresas': lista_empresas,
+            'lista_tareas_completas': lista_tareas_scrapy
         }
 
         return render(request, 'webscrapy/dashboard.html', queryset )
@@ -98,8 +98,16 @@ def crawl(request):
             'unique_id': unique_id,  # unique ID for each record for DB
             'USER_AGENT': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
         }
+
+        scrapy_task = ScrapyTasks()
+        scrapy_task.type = 'ITEMS'
+        scrapy_task.status = 'LAUNCH'
+        scrapy_task.user = request.user
+
+        scrapy_task.save()
+
         task = scrapyd.schedule('default', 'icrawler',
-                                settings=settings, url=url, domain=domain)
+                                settings=settings, url=url, domain=domain, task_id=scrapy_task.id)
 
         return JsonResponse({'task_id': task, 'unique_id': unique_id, 'status': 'started'})
 
@@ -120,3 +128,14 @@ def crawl(request):
                 return JsonResponse({'error': str(e)})
         else:
             return JsonResponse({'status': status})
+
+
+def company_list(request):
+    if request.method == 'GET':
+        lista_empresas = Company.objects.filter(user=request.user)
+
+        queryset = {
+            'lista_empresas': lista_empresas
+        }
+
+        return render(request, 'webscrapy/company_list.html', queryset)

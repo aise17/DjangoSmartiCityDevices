@@ -1,0 +1,1026 @@
+2020-03-07 15:13:03 [scrapy.utils.log] INFO: Scrapy 2.0.0 started (bot: scrapy_app)
+2020-03-07 15:13:03 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.6 (default, Dec 20 2019, 22:36:14) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Linux-4.19.76-linuxkit-x86_64-with-debian-10.2
+2020-03-07 15:13:03 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2020-03-07 15:13:03 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'scrapy_app',
+ 'LOG_FILE': 'logs/default/icrawler/2336a754608611eabf0d0242c0a86008.log',
+ 'NEWSPIDER_MODULE': 'scrapy_app.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scrapy_app.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (compatible; Googlebot/2.1; '
+               '+http://www.google.com/bot.html)'}
+2020-03-07 15:13:03 [scrapy.extensions.telnet] INFO: Telnet Password: ea099af4c3856bbf
+2020-03-07 15:13:03 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-03-07 15:13:03 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-03-07 15:13:03 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-03-07 15:13:03 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_app.pipelines.ScrapyAppPipeline']
+2020-03-07 15:13:03 [scrapy.core.engine] INFO: Spider opened
+2020-03-07 15:13:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-03-07 15:13:03 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-03-07 15:13:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://ziwwie.com/robots.txt> (referer: None)
+2020-03-07 15:13:03 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://ziwwie.com/> from <GET http://ziwwie.com>
+2020-03-07 15:13:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/> (referer: None)
+2020-03-07 15:13:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/contacto> (referer: https://ziwwie.com/)
+2020-03-07 15:13:04 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'www.facebook.com': <GET https://www.facebook.com/ziwwie/>
+2020-03-07 15:13:04 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'twitter.com': <GET https://twitter.com/ziwwie_es>
+2020-03-07 15:13:04 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'itunes.apple.com': <GET https://itunes.apple.com/es/app/ziwwie-personal-shopper-droid/id1147191988>
+2020-03-07 15:13:04 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'play.google.com': <GET https://play.google.com/store/apps/details?id=com.lluraferi.ziwwie>
+2020-03-07 15:13:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/contacto>
+{'url': 'https://ziwwie.com/contacto'}
+2020-03-07 15:13:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/60-calentadores> (referer: https://ziwwie.com/)
+2020-03-07 15:13:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/60-calentadores>
+{'url': 'https://ziwwie.com/60-calentadores'}
+2020-03-07 15:13:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/246-estufas-de-pellets> (referer: https://ziwwie.com/)
+2020-03-07 15:13:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/246-estufas-de-pellets>
+{'url': 'https://ziwwie.com/246-estufas-de-pellets'}
+2020-03-07 15:13:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/211-aires-acondicionados> (referer: https://ziwwie.com/)
+2020-03-07 15:13:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/211-aires-acondicionados>
+{'url': 'https://ziwwie.com/211-aires-acondicionados'}
+2020-03-07 15:13:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/11-climatizacion> (referer: https://ziwwie.com/)
+2020-03-07 15:13:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/11-climatizacion>
+{'url': 'https://ziwwie.com/11-climatizacion'}
+2020-03-07 15:13:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/12-fregaderos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/12-fregaderos>
+{'url': 'https://ziwwie.com/12-fregaderos'}
+2020-03-07 15:13:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/159-modulos-de-almacenamiento> (referer: https://ziwwie.com/)
+2020-03-07 15:13:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/159-modulos-de-almacenamiento>
+{'url': 'https://ziwwie.com/159-modulos-de-almacenamiento'}
+2020-03-07 15:13:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/37-cocinas> (referer: https://ziwwie.com/)
+2020-03-07 15:13:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/37-cocinas>
+{'url': 'https://ziwwie.com/37-cocinas'}
+2020-03-07 15:13:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/39-cafeteras-integrables> (referer: https://ziwwie.com/)
+2020-03-07 15:13:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/39-cafeteras-integrables>
+{'url': 'https://ziwwie.com/39-cafeteras-integrables'}
+2020-03-07 15:13:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/36-microondas> (referer: https://ziwwie.com/)
+2020-03-07 15:13:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/36-microondas>
+{'url': 'https://ziwwie.com/36-microondas'}
+2020-03-07 15:13:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/34-hornos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas> (referer: https://ziwwie.com/)
+2020-03-07 15:13:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/34-hornos>
+{'url': 'https://ziwwie.com/34-hornos'}
+2020-03-07 15:13:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas>
+{'url': 'https://ziwwie.com/marcas'}
+2020-03-07 15:13:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/35-campanas> (referer: https://ziwwie.com/)
+2020-03-07 15:13:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/9-brita> (referer: https://ziwwie.com/)
+2020-03-07 15:13:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/35-campanas>
+{'url': 'https://ziwwie.com/35-campanas'}
+2020-03-07 15:13:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/9-brita>
+{'url': 'https://ziwwie.com/marcas/9-brita'}
+2020-03-07 15:13:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/165-radiador-toallero> (referer: https://ziwwie.com/)
+2020-03-07 15:13:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/cms/14-politica-de-privacidad> (referer: https://ziwwie.com/)
+2020-03-07 15:13:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/165-radiador-toallero>
+{'url': 'https://ziwwie.com/165-radiador-toallero'}
+2020-03-07 15:13:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/cms/14-politica-de-privacidad>
+{'url': 'https://ziwwie.com/cms/14-politica-de-privacidad'}
+2020-03-07 15:13:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/166-emisores-termicos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/mapa-del-sitio> (referer: https://ziwwie.com/)
+2020-03-07 15:13:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/166-emisores-termicos>
+{'url': 'https://ziwwie.com/166-emisores-termicos'}
+2020-03-07 15:13:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/mapa-del-sitio>
+{'url': 'https://ziwwie.com/mapa-del-sitio'}
+2020-03-07 15:13:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/59-termos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/cms/10-servicio-premium> (referer: https://ziwwie.com/)
+2020-03-07 15:13:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/cms/16-paga-mas-tarde> (referer: https://ziwwie.com/)
+2020-03-07 15:13:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/59-termos>
+{'url': 'https://ziwwie.com/59-termos'}
+2020-03-07 15:13:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/cms/10-servicio-premium>
+{'url': 'https://ziwwie.com/cms/10-servicio-premium'}
+2020-03-07 15:13:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/cms/16-paga-mas-tarde>
+{'url': 'https://ziwwie.com/cms/16-paga-mas-tarde'}
+2020-03-07 15:13:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/cms/13-confia-en-ziwwie> (referer: https://ziwwie.com/)
+2020-03-07 15:13:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/cms/13-confia-en-ziwwie>
+{'url': 'https://ziwwie.com/cms/13-confia-en-ziwwie'}
+2020-03-07 15:13:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/38-conjuntos-de-horno-y-placa> (referer: https://ziwwie.com/)
+2020-03-07 15:13:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/cms/3-condiciones-de-venta> (referer: https://ziwwie.com/)
+2020-03-07 15:13:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/cms/15-como-comprar> (referer: https://ziwwie.com/)
+2020-03-07 15:13:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/cms/5-formas-de-pago> (referer: https://ziwwie.com/)
+2020-03-07 15:13:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/38-conjuntos-de-horno-y-placa>
+{'url': 'https://ziwwie.com/38-conjuntos-de-horno-y-placa'}
+2020-03-07 15:13:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/cms/11-preguntas-frecuentes> (referer: https://ziwwie.com/)
+2020-03-07 15:13:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/cms/2-aviso-legal> (referer: https://ziwwie.com/)
+2020-03-07 15:13:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/cms/12-garantias> (referer: https://ziwwie.com/)
+2020-03-07 15:13:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/cms/3-condiciones-de-venta>
+{'url': 'https://ziwwie.com/cms/3-condiciones-de-venta'}
+2020-03-07 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/cms/1-gastos-de-envio> (referer: https://ziwwie.com/)
+2020-03-07 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/cms/4-quienes-somos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/cms/15-como-comprar>
+{'url': 'https://ziwwie.com/cms/15-como-comprar'}
+2020-03-07 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/cms/5-formas-de-pago>
+{'url': 'https://ziwwie.com/cms/5-formas-de-pago'}
+2020-03-07 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/cms/11-preguntas-frecuentes>
+{'url': 'https://ziwwie.com/cms/11-preguntas-frecuentes'}
+2020-03-07 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/28-fibrum> (referer: https://ziwwie.com/)
+2020-03-07 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/27-fagor> (referer: https://ziwwie.com/)
+2020-03-07 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/cms/2-aviso-legal>
+{'url': 'https://ziwwie.com/cms/2-aviso-legal'}
+2020-03-07 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/cms/12-garantias>
+{'url': 'https://ziwwie.com/cms/12-garantias'}
+2020-03-07 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/cms/1-gastos-de-envio>
+{'url': 'https://ziwwie.com/cms/1-gastos-de-envio'}
+2020-03-07 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/cms/4-quienes-somos>
+{'url': 'https://ziwwie.com/cms/4-quienes-somos'}
+2020-03-07 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/25-eltax> (referer: https://ziwwie.com/)
+2020-03-07 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/28-fibrum>
+{'url': 'https://ziwwie.com/marcas/28-fibrum'}
+2020-03-07 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/27-fagor>
+{'url': 'https://ziwwie.com/marcas/27-fagor'}
+2020-03-07 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/26-engel> (referer: https://ziwwie.com/)
+2020-03-07 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/24-elipson> (referer: https://ziwwie.com/)
+2020-03-07 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/25-eltax>
+{'url': 'https://ziwwie.com/marcas/25-eltax'}
+2020-03-07 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/26-engel>
+{'url': 'https://ziwwie.com/marcas/26-engel'}
+2020-03-07 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/21-dyson> (referer: https://ziwwie.com/)
+2020-03-07 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/24-elipson>
+{'url': 'https://ziwwie.com/marcas/24-elipson'}
+2020-03-07 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/21-dyson>
+{'url': 'https://ziwwie.com/marcas/21-dyson'}
+2020-03-07 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/17-daga> (referer: https://ziwwie.com/)
+2020-03-07 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/17-daga>
+{'url': 'https://ziwwie.com/marcas/17-daga'}
+2020-03-07 15:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/20-di4> (referer: https://ziwwie.com/)
+2020-03-07 15:13:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/20-di4>
+{'url': 'https://ziwwie.com/marcas/20-di4'}
+2020-03-07 15:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/19-denver> (referer: https://ziwwie.com/)
+2020-03-07 15:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/15-coby> (referer: https://ziwwie.com/)
+2020-03-07 15:13:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/19-denver>
+{'url': 'https://ziwwie.com/marcas/19-denver'}
+2020-03-07 15:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/13-catalyst> (referer: https://ziwwie.com/)
+2020-03-07 15:13:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/15-coby>
+{'url': 'https://ziwwie.com/marcas/15-coby'}
+2020-03-07 15:13:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/13-catalyst>
+{'url': 'https://ziwwie.com/marcas/13-catalyst'}
+2020-03-07 15:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/12-cata> (referer: https://ziwwie.com/)
+2020-03-07 15:13:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/12-cata>
+{'url': 'https://ziwwie.com/marcas/12-cata'}
+2020-03-07 15:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/8-braun> (referer: https://ziwwie.com/)
+2020-03-07 15:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/10-butsir> (referer: https://ziwwie.com/)
+2020-03-07 15:13:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/8-braun>
+{'url': 'https://ziwwie.com/marcas/8-braun'}
+2020-03-07 15:13:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/103-beurer> (referer: https://ziwwie.com/)
+2020-03-07 15:13:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/10-butsir>
+{'url': 'https://ziwwie.com/marcas/10-butsir'}
+2020-03-07 15:13:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/103-beurer>
+{'url': 'https://ziwwie.com/marcas/103-beurer'}
+2020-03-07 15:13:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/4-balay> (referer: https://ziwwie.com/)
+2020-03-07 15:13:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/4-balay>
+{'url': 'https://ziwwie.com/marcas/4-balay'}
+2020-03-07 15:13:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/2-aeg> (referer: https://ziwwie.com/)
+2020-03-07 15:13:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/2-aeg>
+{'url': 'https://ziwwie.com/marcas/2-aeg'}
+2020-03-07 15:13:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/3-alza> (referer: https://ziwwie.com/)
+2020-03-07 15:13:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/1-aee> (referer: https://ziwwie.com/)
+2020-03-07 15:13:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/3-alza>
+{'url': 'https://ziwwie.com/marcas/3-alza'}
+2020-03-07 15:13:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/1-aee>
+{'url': 'https://ziwwie.com/marcas/1-aee'}
+2020-03-07 15:13:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/87-teka> (referer: https://ziwwie.com/)
+2020-03-07 15:13:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/87-teka>
+{'url': 'https://ziwwie.com/marcas/87-teka'}
+2020-03-07 15:13:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/5-beko> (referer: https://ziwwie.com/)
+2020-03-07 15:13:21 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://ziwwie.com/promociones/9091-consigue-6-meses-de-finish-quantum-gratis.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/5-beko>
+{'url': 'https://ziwwie.com/marcas/5-beko'}
+2020-03-07 15:13:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/18-delonghi> (referer: https://ziwwie.com/)
+2020-03-07 15:13:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/18-delonghi>
+{'url': 'https://ziwwie.com/marcas/18-delonghi'}
+2020-03-07 15:13:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/promociones/8462-promocion-garantia-de-75-anos-con-los-fregaderos-de-teka.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/104-ariete> (referer: https://ziwwie.com/)
+2020-03-07 15:13:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/promociones/8462-promocion-garantia-de-75-anos-con-los-fregaderos-de-teka.html>
+{'url': 'https://ziwwie.com/promociones/8462-promocion-garantia-de-75-anos-con-los-fregaderos-de-teka.html'}
+2020-03-07 15:13:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/combis-libre-instalacion/9233-combi-wonder-wdf118nf.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/104-ariete>
+{'url': 'https://ziwwie.com/marcas/104-ariete'}
+2020-03-07 15:13:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/combis-libre-instalacion/9188-combi-bosch-kgn39aidp.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/combis-libre-instalacion/9233-combi-wonder-wdf118nf.html>
+{'url': 'https://ziwwie.com/combis-libre-instalacion/9233-combi-wonder-wdf118nf.html'}
+2020-03-07 15:13:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/combis-libre-instalacion/9188-combi-bosch-kgn39aidp.html>
+{'url': 'https://ziwwie.com/combis-libre-instalacion/9188-combi-bosch-kgn39aidp.html'}
+2020-03-07 15:13:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/tostadoras/9044-tostador-orbegozo-to414.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/tostadoras/9044-tostador-orbegozo-to414.html>
+{'url': 'https://ziwwie.com/tostadoras/9044-tostador-orbegozo-to414.html'}
+2020-03-07 15:13:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/combis-libre-instalacion/9190-combi-bosch-kgn39awep.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/combis-libre-instalacion/9190-combi-bosch-kgn39awep.html>
+{'url': 'https://ziwwie.com/combis-libre-instalacion/9190-combi-bosch-kgn39awep.html'}
+2020-03-07 15:13:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/tv-led/9230-tv-led-nevir-nvr-777-24rd2-n.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/tv-led/9230-tv-led-nevir-nvr-777-24rd2-n.html>
+{'url': 'https://ziwwie.com/tv-led/9230-tv-led-nevir-nvr-777-24rd2-n.html'}
+2020-03-07 15:13:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/108-wonder> (referer: https://ziwwie.com/)
+2020-03-07 15:13:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/radiadores/9028-radiador-orbegozo-rj2-aceite.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/108-wonder>
+{'url': 'https://ziwwie.com/marcas/108-wonder'}
+2020-03-07 15:13:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/radiadores/9028-radiador-orbegozo-rj2-aceite.html>
+{'url': 'https://ziwwie.com/radiadores/9028-radiador-orbegozo-rj2-aceite.html'}
+2020-03-07 15:13:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/75-rowenta> (referer: https://ziwwie.com/)
+2020-03-07 15:13:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/combis-libre-instalacion/9203-combi-bosch-kgn49xiep.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/75-rowenta>
+{'url': 'https://ziwwie.com/marcas/75-rowenta'}
+2020-03-07 15:13:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/radiadores/9034-radiador-orbegozo-rn1-aceite.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/combis-libre-instalacion/9203-combi-bosch-kgn49xiep.html>
+{'url': 'https://ziwwie.com/combis-libre-instalacion/9203-combi-bosch-kgn49xiep.html'}
+2020-03-07 15:13:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/radiadores/9034-radiador-orbegozo-rn1-aceite.html>
+{'url': 'https://ziwwie.com/radiadores/9034-radiador-orbegozo-rn1-aceite.html'}
+2020-03-07 15:13:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/57-nevir> (referer: https://ziwwie.com/)
+2020-03-07 15:13:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/frigorificos-dos-puertas/9048-frigorifico-hisense-rt6n4dc2.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/57-nevir>
+{'url': 'https://ziwwie.com/marcas/57-nevir'}
+2020-03-07 15:13:23 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://ziwwie.com/termos/9226-termo-edesa-one-1l.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/frigorificos-dos-puertas/9048-frigorifico-hisense-rt6n4dc2.html>
+{'url': 'https://ziwwie.com/frigorificos-dos-puertas/9048-frigorifico-hisense-rt6n4dc2.html'}
+2020-03-07 15:13:23 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://ziwwie.com/termos/9221-termo-edesa-tre-slim-5l-.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/33-hisense> (referer: https://ziwwie.com/)
+2020-03-07 15:13:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/emisores-termicos/9041-emisor-termico-orbegozo-rrw6.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/33-hisense>
+{'url': 'https://ziwwie.com/marcas/33-hisense'}
+2020-03-07 15:13:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/aspiradoras/9099-aspirador-rowenta-ro6491e-silence-force.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/emisores-termicos/9041-emisor-termico-orbegozo-rrw6.html>
+{'url': 'https://ziwwie.com/emisores-termicos/9041-emisor-termico-orbegozo-rrw6.html'}
+2020-03-07 15:13:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/radiador-toallero/9043-radiador-toallero-orbegozo-tha2.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/aspiradoras/9099-aspirador-rowenta-ro6491e-silence-force.html>
+{'url': 'https://ziwwie.com/aspiradoras/9099-aspirador-rowenta-ro6491e-silence-force.html'}
+2020-03-07 15:13:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/hornos-multifuncion/9209-horno-bosch-hba536w.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/radiador-toallero/9043-radiador-toallero-orbegozo-tha2.html>
+{'url': 'https://ziwwie.com/radiador-toallero/9043-radiador-toallero-orbegozo-tha2.html'}
+2020-03-07 15:13:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/tv-led/9042-tv-led-svan-svtv143.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/hornos-multifuncion/9209-horno-bosch-hba536w.html>
+{'url': 'https://ziwwie.com/hornos-multifuncion/9209-horno-bosch-hba536w.html'}
+2020-03-07 15:13:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/tv-led/9042-tv-led-svan-svtv143.html>
+{'url': 'https://ziwwie.com/tv-led/9042-tv-led-svan-svtv143.html'}
+2020-03-07 15:13:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/7-bosch> (referer: https://ziwwie.com/)
+2020-03-07 15:13:24 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://ziwwie.com/termos/9223-termo-edesa-one-8l.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/7-bosch>
+{'url': 'https://ziwwie.com/marcas/7-bosch'}
+2020-03-07 15:13:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/111-svan> (referer: https://ziwwie.com/)
+2020-03-07 15:13:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/111-svan>
+{'url': 'https://ziwwie.com/marcas/111-svan'}
+2020-03-07 15:13:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/79-siemens> (referer: https://ziwwie.com/)
+2020-03-07 15:13:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/79-siemens>
+{'url': 'https://ziwwie.com/marcas/79-siemens'}
+2020-03-07 15:13:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/66-orbegozo> (referer: https://ziwwie.com/)
+2020-03-07 15:13:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/emisores-termicos/9039-emisor-termico-orbegozo-rrw15.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/66-orbegozo>
+{'url': 'https://ziwwie.com/marcas/66-orbegozo'}
+2020-03-07 15:13:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/microcadenas/5419-microcadena-panasonic-scpm25ecs.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/emisores-termicos/9039-emisor-termico-orbegozo-rrw15.html>
+{'url': 'https://ziwwie.com/emisores-termicos/9039-emisor-termico-orbegozo-rrw15.html'}
+2020-03-07 15:13:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/microcadenas/5419-microcadena-panasonic-scpm25ecs.html>
+{'url': 'https://ziwwie.com/microcadenas/5419-microcadena-panasonic-scpm25ecs.html'}
+2020-03-07 15:13:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/secadoras-condensacion/9051-secadora-siemens-wt46g29es.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/secadoras-condensacion/9051-secadora-siemens-wt46g29es.html>
+{'url': 'https://ziwwie.com/secadoras-condensacion/9051-secadora-siemens-wt46g29es.html'}
+2020-03-07 15:13:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/auriculares-diadema/5339-auricular-diadema-panasonic-rphf41bew-bluetooth.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/auriculares-diadema/5339-auricular-diadema-panasonic-rphf41bew-bluetooth.html>
+{'url': 'https://ziwwie.com/auriculares-diadema/5339-auricular-diadema-panasonic-rphf41bew-bluetooth.html'}
+2020-03-07 15:13:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/16-cointra> (referer: https://ziwwie.com/)
+2020-03-07 15:13:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/estufas-de-pellets/3040-estufa-de-pellet-cointra-layna.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/16-cointra>
+{'url': 'https://ziwwie.com/marcas/16-cointra'}
+2020-03-07 15:13:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/placas-gas/5631-placa-edesa-egg63titrcin.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/estufas-de-pellets/3040-estufa-de-pellet-cointra-layna.html>
+{'url': 'https://ziwwie.com/estufas-de-pellets/3040-estufa-de-pellet-cointra-layna.html'}
+2020-03-07 15:13:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/placas-vitroceramica/5687-placa-edesa-evt6328r.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/placas-gas/5631-placa-edesa-egg63titrcin.html>
+{'url': 'https://ziwwie.com/placas-gas/5631-placa-edesa-egg63titrcin.html'}
+2020-03-07 15:13:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/placas-vitroceramica/5687-placa-edesa-evt6328r.html>
+{'url': 'https://ziwwie.com/placas-vitroceramica/5687-placa-edesa-evt6328r.html'}
+2020-03-07 15:13:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/accesorios-smartphones/732-funda-boompods-iphone-6-powerbank-31mah-verde.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/placas-induccion/9072-placa-electrolux-eis62341.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/accesorios-smartphones/732-funda-boompods-iphone-6-powerbank-31mah-verde.html>
+{'url': 'https://ziwwie.com/accesorios-smartphones/732-funda-boompods-iphone-6-powerbank-31mah-verde.html'}
+2020-03-07 15:13:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/batidor-de-leche/2872-batidor-de-leche-cecotec-power-moca-5.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/placas-induccion/9072-placa-electrolux-eis62341.html>
+{'url': 'https://ziwwie.com/placas-induccion/9072-placa-electrolux-eis62341.html'}
+2020-03-07 15:13:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/batidor-de-leche/2872-batidor-de-leche-cecotec-power-moca-5.html>
+{'url': 'https://ziwwie.com/batidor-de-leche/2872-batidor-de-leche-cecotec-power-moca-5.html'}
+2020-03-07 15:13:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/14-cecotec> (referer: https://ziwwie.com/)
+2020-03-07 15:13:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/campanas-decorativas/5579-campana-edesa-ecb7831xgbk.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/14-cecotec>
+{'url': 'https://ziwwie.com/marcas/14-cecotec'}
+2020-03-07 15:13:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/campanas-decorativas/5577-campana-edesa-ecb7411x.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/campanas-decorativas/5579-campana-edesa-ecb7831xgbk.html>
+{'url': 'https://ziwwie.com/campanas-decorativas/5579-campana-edesa-ecb7831xgbk.html'}
+2020-03-07 15:13:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/campanas-decorativas/5577-campana-edesa-ecb7411x.html>
+{'url': 'https://ziwwie.com/campanas-decorativas/5577-campana-edesa-ecb7411x.html'}
+2020-03-07 15:13:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/lavavajillas-libre-instalacion/8367-lavavajillas-edesa-edw-6122-x.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/campanas-decorativas/5607-campana-edesa-ecv9832gwh.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/lavavajillas-libre-instalacion/8367-lavavajillas-edesa-edw-6122-x.html>
+{'url': 'https://ziwwie.com/lavavajillas-libre-instalacion/8367-lavavajillas-edesa-edw-6122-x.html'}
+2020-03-07 15:13:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/campanas-decorativas/5607-campana-edesa-ecv9832gwh.html>
+{'url': 'https://ziwwie.com/campanas-decorativas/5607-campana-edesa-ecv9832gwh.html'}
+2020-03-07 15:13:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/68-panasonic> (referer: https://ziwwie.com/)
+2020-03-07 15:13:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/cables-usb/545-cable-usb-boompods-duo-microusbapple-negro.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/68-panasonic>
+{'url': 'https://ziwwie.com/marcas/68-panasonic'}
+2020-03-07 15:13:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/campanas-grupo-filtrantes/5588-campana-edesa-ecg5831gwh.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/cables-usb/545-cable-usb-boompods-duo-microusbapple-negro.html>
+{'url': 'https://ziwwie.com/cables-usb/545-cable-usb-boompods-duo-microusbapple-negro.html'}
+2020-03-07 15:13:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/campanas-grupo-filtrantes/5588-campana-edesa-ecg5831gwh.html>
+{'url': 'https://ziwwie.com/campanas-grupo-filtrantes/5588-campana-edesa-ecg5831gwh.html'}
+2020-03-07 15:13:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/6-boompods> (referer: https://ziwwie.com/)
+2020-03-07 15:13:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/grifos-cano-alto/8393-grifo-edesa-niagara-inox.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/6-boompods>
+{'url': 'https://ziwwie.com/marcas/6-boompods'}
+2020-03-07 15:13:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/auriculares-diadema/815-auricular-diadema-boompods-headpods-bluetooth-negro.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/grifos-cano-alto/8393-grifo-edesa-niagara-inox.html>
+{'url': 'https://ziwwie.com/grifos-cano-alto/8393-grifo-edesa-niagara-inox.html'}
+2020-03-07 15:13:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/placas-induccion/6775-placa-electrolux-lit6336c.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/auriculares-diadema/815-auricular-diadema-boompods-headpods-bluetooth-negro.html>
+{'url': 'https://ziwwie.com/auriculares-diadema/815-auricular-diadema-boompods-headpods-bluetooth-negro.html'}
+2020-03-07 15:13:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/campanas-decorativas/5594-campana-edesa-ecp7411x.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/placas-induccion/6775-placa-electrolux-lit6336c.html>
+{'url': 'https://ziwwie.com/placas-induccion/6775-placa-electrolux-lit6336c.html'}
+2020-03-07 15:13:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/campanas-decorativas/5594-campana-edesa-ecp7411x.html>
+{'url': 'https://ziwwie.com/campanas-decorativas/5594-campana-edesa-ecp7411x.html'}
+2020-03-07 15:13:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/22-edesa> (referer: https://ziwwie.com/)
+2020-03-07 15:13:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/placas-induccion/5648-placa-edesa-eihr633b.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/22-edesa>
+{'url': 'https://ziwwie.com/marcas/22-edesa'}
+2020-03-07 15:13:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/placas-induccion/5648-placa-edesa-eihr633b.html>
+{'url': 'https://ziwwie.com/placas-induccion/5648-placa-edesa-eihr633b.html'}
+2020-03-07 15:13:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/11-candy> (referer: https://ziwwie.com/)
+2020-03-07 15:13:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/11-candy>
+{'url': 'https://ziwwie.com/marcas/11-candy'}
+2020-03-07 15:13:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/marcas/23-electrolux> (referer: https://ziwwie.com/)
+2020-03-07 15:13:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/marcas/23-electrolux>
+{'url': 'https://ziwwie.com/marcas/23-electrolux'}
+2020-03-07 15:13:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/299-accesorios-informatica> (referer: https://ziwwie.com/)
+2020-03-07 15:13:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/299-accesorios-informatica>
+{'url': 'https://ziwwie.com/299-accesorios-informatica'}
+2020-03-07 15:13:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/156-ofertas> (referer: https://ziwwie.com/)
+2020-03-07 15:13:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/156-ofertas>
+{'url': 'https://ziwwie.com/156-ofertas'}
+2020-03-07 15:13:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/329-detectores-de-metal> (referer: https://ziwwie.com/)
+2020-03-07 15:13:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/329-detectores-de-metal>
+{'url': 'https://ziwwie.com/329-detectores-de-metal'}
+2020-03-07 15:13:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/266-drones> (referer: https://ziwwie.com/)
+2020-03-07 15:13:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/266-drones>
+{'url': 'https://ziwwie.com/266-drones'}
+2020-03-07 15:13:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/292-patines-electricos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/292-patines-electricos>
+{'url': 'https://ziwwie.com/292-patines-electricos'}
+2020-03-07 15:13:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/331-ciclos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/331-ciclos>
+{'url': 'https://ziwwie.com/331-ciclos'}
+2020-03-07 15:13:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/265-movilidad> (referer: https://ziwwie.com/)
+2020-03-07 15:13:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/265-movilidad>
+{'url': 'https://ziwwie.com/265-movilidad'}
+2020-03-07 15:13:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/271-ebooks> (referer: https://ziwwie.com/)
+2020-03-07 15:13:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/271-ebooks>
+{'url': 'https://ziwwie.com/271-ebooks'}
+2020-03-07 15:13:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/290-robots-droide> (referer: https://ziwwie.com/)
+2020-03-07 15:13:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/combis-libre-instalacion/4144-combi-candy-cmgn6184b.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/290-robots-droide>
+{'url': 'https://ziwwie.com/290-robots-droide'}
+2020-03-07 15:13:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/combis-libre-instalacion/4144-combi-candy-cmgn6184b.html>
+{'url': 'https://ziwwie.com/combis-libre-instalacion/4144-combi-candy-cmgn6184b.html'}
+2020-03-07 15:13:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/270-ebooks> (referer: https://ziwwie.com/)
+2020-03-07 15:13:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/270-ebooks>
+{'url': 'https://ziwwie.com/270-ebooks'}
+2020-03-07 15:13:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/293-hoverboards> (referer: https://ziwwie.com/)
+2020-03-07 15:13:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/293-hoverboards>
+{'url': 'https://ziwwie.com/293-hoverboards'}
+2020-03-07 15:13:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/245-tablet> (referer: https://ziwwie.com/)
+2020-03-07 15:13:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/245-tablet>
+{'url': 'https://ziwwie.com/245-tablet'}
+2020-03-07 15:13:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/287-accesorios-tablets> (referer: https://ziwwie.com/)
+2020-03-07 15:13:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/287-accesorios-tablets>
+{'url': 'https://ziwwie.com/287-accesorios-tablets'}
+2020-03-07 15:13:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/244-tablets> (referer: https://ziwwie.com/)
+2020-03-07 15:13:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/244-tablets>
+{'url': 'https://ziwwie.com/244-tablets'}
+2020-03-07 15:13:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/288-accesorios-smartphones> (referer: https://ziwwie.com/)
+2020-03-07 15:13:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/288-accesorios-smartphones>
+{'url': 'https://ziwwie.com/288-accesorios-smartphones'}
+2020-03-07 15:13:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/298-informatica> (referer: https://ziwwie.com/)
+2020-03-07 15:13:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/298-informatica>
+{'url': 'https://ziwwie.com/298-informatica'}
+2020-03-07 15:13:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/316-telefonos-moviles> (referer: https://ziwwie.com/)
+2020-03-07 15:13:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/316-telefonos-moviles>
+{'url': 'https://ziwwie.com/316-telefonos-moviles'}
+2020-03-07 15:13:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/291-pulseras-de-actividad> (referer: https://ziwwie.com/)
+2020-03-07 15:13:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/291-pulseras-de-actividad>
+{'url': 'https://ziwwie.com/291-pulseras-de-actividad'}
+2020-03-07 15:13:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/242-telefonos-inalambricos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/placas-modulares/5627-placa-gas-edesa-egg32tin.html> (referer: https://ziwwie.com/)
+2020-03-07 15:13:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/242-telefonos-inalambricos>
+{'url': 'https://ziwwie.com/242-telefonos-inalambricos'}
+2020-03-07 15:13:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/placas-modulares/5627-placa-gas-edesa-egg32tin.html>
+{'url': 'https://ziwwie.com/placas-modulares/5627-placa-gas-edesa-egg32tin.html'}
+2020-03-07 15:13:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/240-telefonos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/240-telefonos>
+{'url': 'https://ziwwie.com/240-telefonos'}
+2020-03-07 15:13:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/241-smartphones> (referer: https://ziwwie.com/)
+2020-03-07 15:13:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/241-smartphones>
+{'url': 'https://ziwwie.com/241-smartphones'}
+2020-03-07 15:13:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/341-robot-cortacesped> (referer: https://ziwwie.com/)
+2020-03-07 15:13:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/341-robot-cortacesped>
+{'url': 'https://ziwwie.com/341-robot-cortacesped'}
+2020-03-07 15:13:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/243-telefonos-fijos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/243-telefonos-fijos>
+{'url': 'https://ziwwie.com/243-telefonos-fijos'}
+2020-03-07 15:13:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/326-marcos-digitales> (referer: https://ziwwie.com/)
+2020-03-07 15:13:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/326-marcos-digitales>
+{'url': 'https://ziwwie.com/326-marcos-digitales'}
+2020-03-07 15:13:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/148-telefonia-informatica> (referer: https://ziwwie.com/)
+2020-03-07 15:13:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/148-telefonia-informatica>
+{'url': 'https://ziwwie.com/148-telefonia-informatica'}
+2020-03-07 15:13:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/342-robot-limpiaparrillas> (referer: https://ziwwie.com/)
+2020-03-07 15:13:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/342-robot-limpiaparrillas>
+{'url': 'https://ziwwie.com/342-robot-limpiaparrillas'}
+2020-03-07 15:13:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/112-basculas-de-bano> (referer: https://ziwwie.com/)
+2020-03-07 15:13:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/112-basculas-de-bano>
+{'url': 'https://ziwwie.com/112-basculas-de-bano'}
+2020-03-07 15:13:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/340-jardin> (referer: https://ziwwie.com/)
+2020-03-07 15:13:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/340-jardin>
+{'url': 'https://ziwwie.com/340-jardin'}
+2020-03-07 15:13:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/110-cepillos-dentales> (referer: https://ziwwie.com/)
+2020-03-07 15:13:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/110-cepillos-dentales>
+{'url': 'https://ziwwie.com/110-cepillos-dentales'}
+2020-03-07 15:13:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/109-moldeadores-de-pelo> (referer: https://ziwwie.com/)
+2020-03-07 15:13:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/109-moldeadores-de-pelo>
+{'url': 'https://ziwwie.com/109-moldeadores-de-pelo'}
+2020-03-07 15:13:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/113-vigila-bebes> (referer: https://ziwwie.com/)
+2020-03-07 15:13:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/113-vigila-bebes>
+{'url': 'https://ziwwie.com/113-vigila-bebes'}
+2020-03-07 15:13:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/108-planchas-de-pelo> (referer: https://ziwwie.com/)
+2020-03-07 15:13:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/108-planchas-de-pelo>
+{'url': 'https://ziwwie.com/108-planchas-de-pelo'}
+2020-03-07 15:13:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/263-smartwatchs> (referer: https://ziwwie.com/)
+2020-03-07 15:13:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/263-smartwatchs>
+{'url': 'https://ziwwie.com/263-smartwatchs'}
+2020-03-07 15:13:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/107-secadores-de-pelo> (referer: https://ziwwie.com/)
+2020-03-07 15:13:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/107-secadores-de-pelo>
+{'url': 'https://ziwwie.com/107-secadores-de-pelo'}
+2020-03-07 15:13:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/106-depiladoras> (referer: https://ziwwie.com/)
+2020-03-07 15:13:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/106-depiladoras>
+{'url': 'https://ziwwie.com/106-depiladoras'}
+2020-03-07 15:13:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/111-irrigadores-dentales> (referer: https://ziwwie.com/)
+2020-03-07 15:13:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/111-irrigadores-dentales>
+{'url': 'https://ziwwie.com/111-irrigadores-dentales'}
+2020-03-07 15:13:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/104-nariceros> (referer: https://ziwwie.com/)
+2020-03-07 15:13:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/104-nariceros>
+{'url': 'https://ziwwie.com/104-nariceros'}
+2020-03-07 15:13:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/102-afeitadoras-corporales> (referer: https://ziwwie.com/)
+2020-03-07 15:13:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/102-afeitadoras-corporales>
+{'url': 'https://ziwwie.com/102-afeitadoras-corporales'}
+2020-03-07 15:13:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/105-barberos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/105-barberos>
+{'url': 'https://ziwwie.com/105-barberos'}
+2020-03-07 15:13:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/101-afeitadoras> (referer: https://ziwwie.com/)
+2020-03-07 15:13:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/101-afeitadoras>
+{'url': 'https://ziwwie.com/101-afeitadoras'}
+2020-03-07 15:13:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/78-cuidado-personal> (referer: https://ziwwie.com/)
+2020-03-07 15:13:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/78-cuidado-personal>
+{'url': 'https://ziwwie.com/78-cuidado-personal'}
+2020-03-07 15:13:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/186-cocederos-de-huevos-electricos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/186-cocederos-de-huevos-electricos>
+{'url': 'https://ziwwie.com/186-cocederos-de-huevos-electricos'}
+2020-03-07 15:13:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/103-cortapelos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/103-cortapelos>
+{'url': 'https://ziwwie.com/103-cortapelos'}
+2020-03-07 15:13:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/337-cocina-creativa> (referer: https://ziwwie.com/)
+2020-03-07 15:13:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/337-cocina-creativa>
+{'url': 'https://ziwwie.com/337-cocina-creativa'}
+2020-03-07 15:13:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/183-batidoras-de-reposteria> (referer: https://ziwwie.com/)
+2020-03-07 15:13:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/183-batidoras-de-reposteria>
+{'url': 'https://ziwwie.com/183-batidoras-de-reposteria'}
+2020-03-07 15:13:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/187-panificadoras> (referer: https://ziwwie.com/)
+2020-03-07 15:13:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/187-panificadoras>
+{'url': 'https://ziwwie.com/187-panificadoras'}
+2020-03-07 15:13:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/182-batidoras-de-vaso> (referer: https://ziwwie.com/)
+2020-03-07 15:13:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/182-batidoras-de-vaso>
+{'url': 'https://ziwwie.com/182-batidoras-de-vaso'}
+2020-03-07 15:13:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/319-tiradores-de-cerveza> (referer: https://ziwwie.com/)
+2020-03-07 15:13:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/319-tiradores-de-cerveza>
+{'url': 'https://ziwwie.com/319-tiradores-de-cerveza'}
+2020-03-07 15:13:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/184-vaporeras> (referer: https://ziwwie.com/)
+2020-03-07 15:13:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/184-vaporeras>
+{'url': 'https://ziwwie.com/184-vaporeras'}
+2020-03-07 15:13:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/178-procesadores-de-alimentos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/178-procesadores-de-alimentos>
+{'url': 'https://ziwwie.com/178-procesadores-de-alimentos'}
+2020-03-07 15:13:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/179-picadoras-electricas> (referer: https://ziwwie.com/)
+2020-03-07 15:13:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/179-picadoras-electricas>
+{'url': 'https://ziwwie.com/179-picadoras-electricas'}
+2020-03-07 15:13:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/177-robots-cocina> (referer: https://ziwwie.com/)
+2020-03-07 15:13:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/177-robots-cocina>
+{'url': 'https://ziwwie.com/177-robots-cocina'}
+2020-03-07 15:13:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/255-utensilios-electricos-de-cocina> (referer: https://ziwwie.com/)
+2020-03-07 15:13:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/255-utensilios-electricos-de-cocina>
+{'url': 'https://ziwwie.com/255-utensilios-electricos-de-cocina'}
+2020-03-07 15:13:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/175-menaje-de-cocina> (referer: https://ziwwie.com/)
+2020-03-07 15:13:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/175-menaje-de-cocina>
+{'url': 'https://ziwwie.com/175-menaje-de-cocina'}
+2020-03-07 15:13:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/180-freidoras> (referer: https://ziwwie.com/)
+2020-03-07 15:13:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/180-freidoras>
+{'url': 'https://ziwwie.com/180-freidoras'}
+2020-03-07 15:13:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/173-triturador-de-hielo> (referer: https://ziwwie.com/)
+2020-03-07 15:13:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/173-triturador-de-hielo>
+{'url': 'https://ziwwie.com/173-triturador-de-hielo'}
+2020-03-07 15:13:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/174-dispensadores-de-agua> (referer: https://ziwwie.com/)
+2020-03-07 15:13:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/174-dispensadores-de-agua>
+{'url': 'https://ziwwie.com/174-dispensadores-de-agua'}
+2020-03-07 15:13:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/86-basculas-de-cocina> (referer: https://ziwwie.com/)
+2020-03-07 15:13:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/86-basculas-de-cocina>
+{'url': 'https://ziwwie.com/86-basculas-de-cocina'}
+2020-03-07 15:13:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/171-pimentero> (referer: https://ziwwie.com/)
+2020-03-07 15:13:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/171-pimentero>
+{'url': 'https://ziwwie.com/171-pimentero'}
+2020-03-07 15:13:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/87-cortafiambres> (referer: https://ziwwie.com/)
+2020-03-07 15:13:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/87-cortafiambres>
+{'url': 'https://ziwwie.com/87-cortafiambres'}
+2020-03-07 15:13:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/185-arroceras> (referer: https://ziwwie.com/)
+2020-03-07 15:13:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/185-arroceras>
+{'url': 'https://ziwwie.com/185-arroceras'}
+2020-03-07 15:13:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/176-preparador-de-alimentos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/176-preparador-de-alimentos>
+{'url': 'https://ziwwie.com/176-preparador-de-alimentos'}
+2020-03-07 15:13:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/85-envasadoras-al-vacio> (referer: https://ziwwie.com/)
+2020-03-07 15:13:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/85-envasadoras-al-vacio>
+{'url': 'https://ziwwie.com/85-envasadoras-al-vacio'}
+2020-03-07 15:13:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/170-barbacoas> (referer: https://ziwwie.com/)
+2020-03-07 15:13:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/170-barbacoas>
+{'url': 'https://ziwwie.com/170-barbacoas'}
+2020-03-07 15:13:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/84-sandwicheras> (referer: https://ziwwie.com/)
+2020-03-07 15:13:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/84-sandwicheras>
+{'url': 'https://ziwwie.com/84-sandwicheras'}
+2020-03-07 15:13:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/81-placas-electricas-portatiles> (referer: https://ziwwie.com/)
+2020-03-07 15:13:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/81-placas-electricas-portatiles>
+{'url': 'https://ziwwie.com/81-placas-electricas-portatiles'}
+2020-03-07 15:13:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/83-grill> (referer: https://ziwwie.com/)
+2020-03-07 15:13:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/83-grill>
+{'url': 'https://ziwwie.com/83-grill'}
+2020-03-07 15:13:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/82-planchas-de-asar> (referer: https://ziwwie.com/)
+2020-03-07 15:13:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/82-planchas-de-asar>
+{'url': 'https://ziwwie.com/82-planchas-de-asar'}
+2020-03-07 15:13:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/74-cocina> (referer: https://ziwwie.com/)
+2020-03-07 15:13:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/74-cocina>
+{'url': 'https://ziwwie.com/74-cocina'}
+2020-03-07 15:13:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/168-hornos-sobremesa> (referer: https://ziwwie.com/)
+2020-03-07 15:13:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/168-hornos-sobremesa>
+{'url': 'https://ziwwie.com/168-hornos-sobremesa'}
+2020-03-07 15:13:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/276-braseros> (referer: https://ziwwie.com/)
+2020-03-07 15:13:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/276-braseros>
+{'url': 'https://ziwwie.com/276-braseros'}
+2020-03-07 15:13:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/172-neveras-electricas-portatiles> (referer: https://ziwwie.com/)
+2020-03-07 15:13:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/172-neveras-electricas-portatiles>
+{'url': 'https://ziwwie.com/172-neveras-electricas-portatiles'}
+2020-03-07 15:13:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/328-purificadores> (referer: https://ziwwie.com/)
+2020-03-07 15:13:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/328-purificadores>
+{'url': 'https://ziwwie.com/328-purificadores'}
+2020-03-07 15:13:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/169-hornillos-de-gas> (referer: https://ziwwie.com/)
+2020-03-07 15:13:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/169-hornillos-de-gas>
+{'url': 'https://ziwwie.com/169-hornillos-de-gas'}
+2020-03-07 15:13:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/259-multicazuelas-electricas> (referer: https://ziwwie.com/)
+2020-03-07 15:13:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/259-multicazuelas-electricas>
+{'url': 'https://ziwwie.com/259-multicazuelas-electricas'}
+2020-03-07 15:13:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/275-convectores> (referer: https://ziwwie.com/)
+2020-03-07 15:13:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/275-convectores>
+{'url': 'https://ziwwie.com/275-convectores'}
+2020-03-07 15:13:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/181-batidoras> (referer: https://ziwwie.com/)
+2020-03-07 15:13:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/181-batidoras>
+{'url': 'https://ziwwie.com/181-batidoras'}
+2020-03-07 15:13:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/204-calefactores> (referer: https://ziwwie.com/)
+2020-03-07 15:13:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/204-calefactores>
+{'url': 'https://ziwwie.com/204-calefactores'}
+2020-03-07 15:13:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/205-ventiladores> (referer: https://ziwwie.com/)
+2020-03-07 15:13:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/205-ventiladores>
+{'url': 'https://ziwwie.com/205-ventiladores'}
+2020-03-07 15:13:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/80-calefaccion-y-ventilacion> (referer: https://ziwwie.com/)
+2020-03-07 15:13:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/80-calefaccion-y-ventilacion>
+{'url': 'https://ziwwie.com/80-calefaccion-y-ventilacion'}
+2020-03-07 15:13:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/91-calienta-liquidos> (referer: https://ziwwie.com/)
+2020-03-07 15:13:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/91-calienta-liquidos>
+{'url': 'https://ziwwie.com/91-calienta-liquidos'}
+2020-03-07 15:13:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/273-estufas> (referer: https://ziwwie.com/)
+2020-03-07 15:13:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/273-estufas>
+{'url': 'https://ziwwie.com/273-estufas'}
+2020-03-07 15:13:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/90-tostadoras> (referer: https://ziwwie.com/)
+2020-03-07 15:13:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/90-tostadoras>
+{'url': 'https://ziwwie.com/90-tostadoras'}
+2020-03-07 15:13:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/89-molinillos-de-cafe> (referer: https://ziwwie.com/)
+2020-03-07 15:13:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/89-molinillos-de-cafe>
+{'url': 'https://ziwwie.com/89-molinillos-de-cafe'}
+2020-03-07 15:13:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/93-exprimidores> (referer: https://ziwwie.com/)
+2020-03-07 15:13:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/93-exprimidores>
+{'url': 'https://ziwwie.com/93-exprimidores'}
+2020-03-07 15:13:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/75-desayuno> (referer: https://ziwwie.com/)
+2020-03-07 15:13:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/75-desayuno>
+{'url': 'https://ziwwie.com/75-desayuno'}
+2020-03-07 15:13:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/206-deshumidificadores> (referer: https://ziwwie.com/)
+2020-03-07 15:13:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/206-deshumidificadores>
+{'url': 'https://ziwwie.com/206-deshumidificadores'}
+2020-03-07 15:13:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/274-radiadores> (referer: https://ziwwie.com/)
+2020-03-07 15:13:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/274-radiadores>
+{'url': 'https://ziwwie.com/274-radiadores'}
+2020-03-07 15:13:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/197-cafeteras-italianas> (referer: https://ziwwie.com/)
+2020-03-07 15:13:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/197-cafeteras-italianas>
+{'url': 'https://ziwwie.com/197-cafeteras-italianas'}
+2020-03-07 15:13:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/88-batidor-de-leche> (referer: https://ziwwie.com/)
+2020-03-07 15:13:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/88-batidor-de-leche>
+{'url': 'https://ziwwie.com/88-batidor-de-leche'}
+2020-03-07 15:13:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/195-cafeteras-express> (referer: https://ziwwie.com/)
+2020-03-07 15:13:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/339-cafetera-superautomatica> (referer: https://ziwwie.com/)
+2020-03-07 15:13:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/195-cafeteras-express>
+{'url': 'https://ziwwie.com/195-cafeteras-express'}
+2020-03-07 15:13:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/339-cafetera-superautomatica>
+{'url': 'https://ziwwie.com/339-cafetera-superautomatica'}
+2020-03-07 15:13:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/196-cafeteras-de-goteo> (referer: https://ziwwie.com/)
+2020-03-07 15:13:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/196-cafeteras-de-goteo>
+{'url': 'https://ziwwie.com/196-cafeteras-de-goteo'}
+2020-03-07 15:13:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/92-licuadoras> (referer: https://ziwwie.com/)
+2020-03-07 15:13:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/92-licuadoras>
+{'url': 'https://ziwwie.com/92-licuadoras'}
+2020-03-07 15:13:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/193-cafeteras> (referer: https://ziwwie.com/)
+2020-03-07 15:13:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/193-cafeteras>
+{'url': 'https://ziwwie.com/193-cafeteras'}
+2020-03-07 15:13:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/194-cafeteras-de-capsulas> (referer: https://ziwwie.com/)
+2020-03-07 15:13:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/194-cafeteras-de-capsulas>
+{'url': 'https://ziwwie.com/194-cafeteras-de-capsulas'}
+2020-03-07 15:13:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/201-sauna-facial> (referer: https://ziwwie.com/)
+2020-03-07 15:13:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/201-sauna-facial>
+{'url': 'https://ziwwie.com/201-sauna-facial'}
+2020-03-07 15:13:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/199-calor-textil> (referer: https://ziwwie.com/)
+2020-03-07 15:13:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/199-calor-textil>
+{'url': 'https://ziwwie.com/199-calor-textil'}
+2020-03-07 15:13:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/203-estetica> (referer: https://ziwwie.com/)
+2020-03-07 15:13:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/203-estetica>
+{'url': 'https://ziwwie.com/203-estetica'}
+2020-03-07 15:14:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/100-quitapelusas> (referer: https://ziwwie.com/)
+2020-03-07 15:14:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/100-quitapelusas>
+{'url': 'https://ziwwie.com/100-quitapelusas'}
+2020-03-07 15:14:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/198-bienestar-corporal> (referer: https://ziwwie.com/)
+2020-03-07 15:14:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/198-bienestar-corporal>
+{'url': 'https://ziwwie.com/198-bienestar-corporal'}
+2020-03-07 15:14:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/209-secadora-centrifugadora> (referer: https://ziwwie.com/)
+2020-03-07 15:14:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/209-secadora-centrifugadora>
+{'url': 'https://ziwwie.com/209-secadora-centrifugadora'}
+2020-03-07 15:14:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/207-humidificadores> (referer: https://ziwwie.com/)
+2020-03-07 15:14:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/207-humidificadores>
+{'url': 'https://ziwwie.com/207-humidificadores'}
+2020-03-07 15:14:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/210-tabla-de-planchar> (referer: https://ziwwie.com/)
+2020-03-07 15:14:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/210-tabla-de-planchar>
+{'url': 'https://ziwwie.com/210-tabla-de-planchar'}
+2020-03-07 15:14:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/77-planchado-secado-costura> (referer: https://ziwwie.com/)
+2020-03-07 15:14:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/77-planchado-secado-costura>
+{'url': 'https://ziwwie.com/77-planchado-secado-costura'}
+2020-03-07 15:14:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/98-centro-de-planchado> (referer: https://ziwwie.com/)
+2020-03-07 15:14:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/344-robot-limpiacristales> (referer: https://ziwwie.com/)
+2020-03-07 15:14:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/98-centro-de-planchado>
+{'url': 'https://ziwwie.com/98-centro-de-planchado'}
+2020-03-07 15:14:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/344-robot-limpiacristales>
+{'url': 'https://ziwwie.com/344-robot-limpiacristales'}
+2020-03-07 15:14:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/212-vaporetas-limpiadoras-a-vapor-fregonas> (referer: https://ziwwie.com/)
+2020-03-07 15:14:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/212-vaporetas-limpiadoras-a-vapor-fregonas>
+{'url': 'https://ziwwie.com/212-vaporetas-limpiadoras-a-vapor-fregonas'}
+2020-03-07 15:14:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/97-aspiradoras-de-mano> (referer: https://ziwwie.com/)
+2020-03-07 15:14:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/97-aspiradoras-de-mano>
+{'url': 'https://ziwwie.com/97-aspiradoras-de-mano'}
+2020-03-07 15:14:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/99-plancha> (referer: https://ziwwie.com/)
+2020-03-07 15:14:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/99-plancha>
+{'url': 'https://ziwwie.com/99-plancha'}
+2020-03-07 15:14:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/286-cafeteras-moka> (referer: https://ziwwie.com/)
+2020-03-07 15:14:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/286-cafeteras-moka>
+{'url': 'https://ziwwie.com/286-cafeteras-moka'}
+2020-03-07 15:14:03 [scrapy.extensions.logstats] INFO: Crawled 224 pages (at 224 pages/min), scraped 218 items (at 218 items/min)
+2020-03-07 15:14:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/96-aspiradoras> (referer: https://ziwwie.com/)
+2020-03-07 15:14:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/96-aspiradoras>
+{'url': 'https://ziwwie.com/96-aspiradoras'}
+2020-03-07 15:14:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/95-robots-aspiradores> (referer: https://ziwwie.com/)
+2020-03-07 15:14:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/95-robots-aspiradores>
+{'url': 'https://ziwwie.com/95-robots-aspiradores'}
+2020-03-07 15:14:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/73-pequeno-electrodomestico> (referer: https://ziwwie.com/)
+2020-03-07 15:14:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/73-pequeno-electrodomestico>
+{'url': 'https://ziwwie.com/73-pequeno-electrodomestico'}
+2020-03-07 15:14:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/94-aspiradoras-escoba> (referer: https://ziwwie.com/)
+2020-03-07 15:14:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/94-aspiradoras-escoba>
+{'url': 'https://ziwwie.com/94-aspiradoras-escoba'}
+2020-03-07 15:14:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/238-videocamaras-hd> (referer: https://ziwwie.com/)
+2020-03-07 15:14:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/238-videocamaras-hd>
+{'url': 'https://ziwwie.com/238-videocamaras-hd'}
+2020-03-07 15:14:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/239-videocamaras-deportivas> (referer: https://ziwwie.com/)
+2020-03-07 15:14:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/239-videocamaras-deportivas>
+{'url': 'https://ziwwie.com/239-videocamaras-deportivas'}
+2020-03-07 15:14:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/76-aspiracion-limpieza> (referer: https://ziwwie.com/)
+2020-03-07 15:14:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/76-aspiracion-limpieza>
+{'url': 'https://ziwwie.com/76-aspiracion-limpieza'}
+2020-03-07 15:14:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/236-camaras-semi-compactas> (referer: https://ziwwie.com/)
+2020-03-07 15:14:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/236-camaras-semi-compactas>
+{'url': 'https://ziwwie.com/236-camaras-semi-compactas'}
+2020-03-07 15:14:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/234-videocamaras> (referer: https://ziwwie.com/)
+2020-03-07 15:14:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/234-videocamaras>
+{'url': 'https://ziwwie.com/234-videocamaras'}
+2020-03-07 15:14:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/202-salud> (referer: https://ziwwie.com/)
+2020-03-07 15:14:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/202-salud>
+{'url': 'https://ziwwie.com/202-salud'}
+2020-03-07 15:14:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/334-smart-home> (referer: https://ziwwie.com/)
+2020-03-07 15:14:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/334-smart-home>
+{'url': 'https://ziwwie.com/334-smart-home'}
+2020-03-07 15:14:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/72-fotografia-video> (referer: https://ziwwie.com/)
+2020-03-07 15:14:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/72-fotografia-video>
+{'url': 'https://ziwwie.com/72-fotografia-video'}
+2020-03-07 15:14:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/235-camaras-compactas> (referer: https://ziwwie.com/)
+2020-03-07 15:14:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/235-camaras-compactas>
+{'url': 'https://ziwwie.com/235-camaras-compactas'}
+2020-03-07 15:14:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/233-camaras-de-fotos> (referer: https://ziwwie.com/)
+2020-03-07 15:14:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/233-camaras-de-fotos>
+{'url': 'https://ziwwie.com/233-camaras-de-fotos'}
+2020-03-07 15:14:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/232-auriculares-deportivos> (referer: https://ziwwie.com/)
+2020-03-07 15:14:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/232-auriculares-deportivos>
+{'url': 'https://ziwwie.com/232-auriculares-deportivos'}
+2020-03-07 15:14:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/237-camaras-reflex> (referer: https://ziwwie.com/)
+2020-03-07 15:14:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/237-camaras-reflex>
+{'url': 'https://ziwwie.com/237-camaras-reflex'}
+2020-03-07 15:14:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/229-auriculares> (referer: https://ziwwie.com/)
+2020-03-07 15:14:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/229-auriculares>
+{'url': 'https://ziwwie.com/229-auriculares'}
+2020-03-07 15:14:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/228-subwoofers> (referer: https://ziwwie.com/)
+2020-03-07 15:14:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/228-subwoofers>
+{'url': 'https://ziwwie.com/228-subwoofers'}
+2020-03-07 15:14:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/227-conjunto-de-altavoces> (referer: https://ziwwie.com/)
+2020-03-07 15:14:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/227-conjunto-de-altavoces>
+{'url': 'https://ziwwie.com/227-conjunto-de-altavoces'}
+2020-03-07 15:14:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/226-altavoces-pie> (referer: https://ziwwie.com/)
+2020-03-07 15:14:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/226-altavoces-pie>
+{'url': 'https://ziwwie.com/226-altavoces-pie'}
+2020-03-07 15:14:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/335-altavoces-con-mesa-dj> (referer: https://ziwwie.com/)
+2020-03-07 15:14:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/335-altavoces-con-mesa-dj>
+{'url': 'https://ziwwie.com/335-altavoces-con-mesa-dj'}
+2020-03-07 15:14:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/324-bombillas-con-altavoz> (referer: https://ziwwie.com/)
+2020-03-07 15:14:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/324-bombillas-con-altavoz>
+{'url': 'https://ziwwie.com/324-bombillas-con-altavoz'}
+2020-03-07 15:14:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/230-auriculares-diadema> (referer: https://ziwwie.com/)
+2020-03-07 15:14:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/230-auriculares-diadema>
+{'url': 'https://ziwwie.com/230-auriculares-diadema'}
+2020-03-07 15:14:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/119-altavoces> (referer: https://ziwwie.com/)
+2020-03-07 15:14:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/119-altavoces>
+{'url': 'https://ziwwie.com/119-altavoces'}
+2020-03-07 15:14:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/208-cepillo-de-vapor> (referer: https://ziwwie.com/)
+2020-03-07 15:14:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/208-cepillo-de-vapor>
+{'url': 'https://ziwwie.com/208-cepillo-de-vapor'}
+2020-03-07 15:14:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/224-reproductor-multimedia-portatil-> (referer: https://ziwwie.com/)
+2020-03-07 15:14:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/224-reproductor-multimedia-portatil->
+{'url': 'https://ziwwie.com/224-reproductor-multimedia-portatil-'}
+2020-03-07 15:14:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/117-grabadoras> (referer: https://ziwwie.com/)
+2020-03-07 15:14:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/117-grabadoras>
+{'url': 'https://ziwwie.com/117-grabadoras'}
+2020-03-07 15:14:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/231-auriculares-internos> (referer: https://ziwwie.com/)
+2020-03-07 15:14:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/231-auriculares-internos>
+{'url': 'https://ziwwie.com/231-auriculares-internos'}
+2020-03-07 15:14:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/223-altavoces-portatiles> (referer: https://ziwwie.com/)
+2020-03-07 15:14:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/223-altavoces-portatiles>
+{'url': 'https://ziwwie.com/223-altavoces-portatiles'}
+2020-03-07 15:14:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/318-transmisores-fm-> (referer: https://ziwwie.com/)
+2020-03-07 15:14:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/318-transmisores-fm->
+{'url': 'https://ziwwie.com/318-transmisores-fm-'}
+2020-03-07 15:14:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/114-audio-portatil> (referer: https://ziwwie.com/)
+2020-03-07 15:14:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/114-audio-portatil>
+{'url': 'https://ziwwie.com/114-audio-portatil'}
+2020-03-07 15:14:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/283-reproductores-de-red> (referer: https://ziwwie.com/)
+2020-03-07 15:14:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/283-reproductores-de-red>
+{'url': 'https://ziwwie.com/283-reproductores-de-red'}
+2020-03-07 15:14:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/222-giradiscos> (referer: https://ziwwie.com/)
+2020-03-07 15:14:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/222-giradiscos>
+{'url': 'https://ziwwie.com/222-giradiscos'}
+2020-03-07 15:14:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/115-radios-cd> (referer: https://ziwwie.com/)
+2020-03-07 15:14:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/115-radios-cd>
+{'url': 'https://ziwwie.com/115-radios-cd'}
+2020-03-07 15:14:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/220-amplificadores> (referer: https://ziwwie.com/)
+2020-03-07 15:14:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/220-amplificadores>
+{'url': 'https://ziwwie.com/220-amplificadores'}
+2020-03-07 15:14:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/225-altavoces-estanteria> (referer: https://ziwwie.com/)
+2020-03-07 15:14:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/225-altavoces-estanteria>
+{'url': 'https://ziwwie.com/225-altavoces-estanteria'}
+2020-03-07 15:14:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/221-reproductores-cd> (referer: https://ziwwie.com/)
+2020-03-07 15:14:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/221-reproductores-cd>
+{'url': 'https://ziwwie.com/221-reproductores-cd'}
+2020-03-07 15:14:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/118-radios-portatiles> (referer: https://ziwwie.com/)
+2020-03-07 15:14:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/118-radios-portatiles>
+{'url': 'https://ziwwie.com/118-radios-portatiles'}
+2020-03-07 15:14:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/215-audio> (referer: https://ziwwie.com/)
+2020-03-07 15:14:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/215-audio>
+{'url': 'https://ziwwie.com/215-audio'}
+2020-03-07 15:14:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/116-radios-despertadores> (referer: https://ziwwie.com/)
+2020-03-07 15:14:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/116-radios-despertadores>
+{'url': 'https://ziwwie.com/116-radios-despertadores'}
+2020-03-07 15:14:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/218-receptores-av> (referer: https://ziwwie.com/)
+2020-03-07 15:14:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/218-receptores-av>
+{'url': 'https://ziwwie.com/218-receptores-av'}
+2020-03-07 15:14:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/129-dvd-portatil> (referer: https://ziwwie.com/)
+2020-03-07 15:14:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/129-dvd-portatil>
+{'url': 'https://ziwwie.com/129-dvd-portatil'}
+2020-03-07 15:14:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/217-minicadenas> (referer: https://ziwwie.com/)
+2020-03-07 15:14:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/217-minicadenas>
+{'url': 'https://ziwwie.com/217-minicadenas'}
+2020-03-07 15:14:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/127-dvd-reproductor> (referer: https://ziwwie.com/)
+2020-03-07 15:14:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/127-dvd-reproductor>
+{'url': 'https://ziwwie.com/127-dvd-reproductor'}
+2020-03-07 15:14:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/124-bluray-reproductor> (referer: https://ziwwie.com/)
+2020-03-07 15:14:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/124-bluray-reproductor>
+{'url': 'https://ziwwie.com/124-bluray-reproductor'}
+2020-03-07 15:14:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/125-bluray-grabador> (referer: https://ziwwie.com/)
+2020-03-07 15:14:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/125-bluray-grabador>
+{'url': 'https://ziwwie.com/125-bluray-grabador'}
+2020-03-07 15:14:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/126-dvd> (referer: https://ziwwie.com/)
+2020-03-07 15:14:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/126-dvd>
+{'url': 'https://ziwwie.com/126-dvd'}
+2020-03-07 15:14:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/216-microcadenas> (referer: https://ziwwie.com/)
+2020-03-07 15:14:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/216-microcadenas>
+{'url': 'https://ziwwie.com/216-microcadenas'}
+2020-03-07 15:14:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/121-home-cinema-conjunto-av> (referer: https://ziwwie.com/)
+2020-03-07 15:14:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/121-home-cinema-conjunto-av>
+{'url': 'https://ziwwie.com/121-home-cinema-conjunto-av'}
+2020-03-07 15:14:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/120-home-cinema> (referer: https://ziwwie.com/)
+2020-03-07 15:14:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/120-home-cinema>
+{'url': 'https://ziwwie.com/120-home-cinema'}
+2020-03-07 15:14:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/213-home-cinema-bluray> (referer: https://ziwwie.com/)
+2020-03-07 15:14:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/213-home-cinema-bluray>
+{'url': 'https://ziwwie.com/213-home-cinema-bluray'}
+2020-03-07 15:14:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/219-receptores-av-con-altavoces> (referer: https://ziwwie.com/)
+2020-03-07 15:14:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/219-receptores-av-con-altavoces>
+{'url': 'https://ziwwie.com/219-receptores-av-con-altavoces'}
+2020-03-07 15:14:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/256-accesorios-televisores> (referer: https://ziwwie.com/)
+2020-03-07 15:14:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/256-accesorios-televisores>
+{'url': 'https://ziwwie.com/256-accesorios-televisores'}
+2020-03-07 15:14:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/123-bluray> (referer: https://ziwwie.com/)
+2020-03-07 15:14:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/123-bluray>
+{'url': 'https://ziwwie.com/123-bluray'}
+2020-03-07 15:14:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/122-barra-de-sonido> (referer: https://ziwwie.com/)
+2020-03-07 15:14:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/122-barra-de-sonido>
+{'url': 'https://ziwwie.com/122-barra-de-sonido'}
+2020-03-07 15:14:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/158-griferia-bano> (referer: https://ziwwie.com/)
+2020-03-07 15:14:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/158-griferia-bano>
+{'url': 'https://ziwwie.com/158-griferia-bano'}
+2020-03-07 15:14:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/69-grifos-bajo-extraible> (referer: https://ziwwie.com/)
+2020-03-07 15:14:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/69-grifos-bajo-extraible>
+{'url': 'https://ziwwie.com/69-grifos-bajo-extraible'}
+2020-03-07 15:14:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/249-imagen> (referer: https://ziwwie.com/)
+2020-03-07 15:14:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/249-imagen>
+{'url': 'https://ziwwie.com/249-imagen'}
+2020-03-07 15:14:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/70-imagen-cine> (referer: https://ziwwie.com/)
+2020-03-07 15:14:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/70-imagen-cine>
+{'url': 'https://ziwwie.com/70-imagen-cine'}
+2020-03-07 15:14:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/67-grifos-cano-bajo> (referer: https://ziwwie.com/)
+2020-03-07 15:14:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/67-grifos-cano-bajo>
+{'url': 'https://ziwwie.com/67-grifos-cano-bajo'}
+2020-03-07 15:14:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/250-televisores> (referer: https://ziwwie.com/)
+2020-03-07 15:14:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/250-televisores>
+{'url': 'https://ziwwie.com/250-televisores'}
+2020-03-07 15:14:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/13-grifos> (referer: https://ziwwie.com/)
+2020-03-07 15:14:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/13-grifos>
+{'url': 'https://ziwwie.com/13-grifos'}
+2020-03-07 15:14:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/147-accesorios-fregaderos> (referer: https://ziwwie.com/)
+2020-03-07 15:14:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/147-accesorios-fregaderos>
+{'url': 'https://ziwwie.com/147-accesorios-fregaderos'}
+2020-03-07 15:14:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/71-sonido> (referer: https://ziwwie.com/)
+2020-03-07 15:14:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/71-sonido>
+{'url': 'https://ziwwie.com/71-sonido'}
+2020-03-07 15:14:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/254-proyectores> (referer: https://ziwwie.com/)
+2020-03-07 15:14:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/254-proyectores>
+{'url': 'https://ziwwie.com/254-proyectores'}
+2020-03-07 15:14:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/66-grifos-cano-alto> (referer: https://ziwwie.com/)
+2020-03-07 15:14:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/66-grifos-cano-alto>
+{'url': 'https://ziwwie.com/66-grifos-cano-alto'}
+2020-03-07 15:14:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/297-fregaderos-ceramicos> (referer: https://ziwwie.com/)
+2020-03-07 15:14:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/297-fregaderos-ceramicos>
+{'url': 'https://ziwwie.com/297-fregaderos-ceramicos'}
+2020-03-07 15:14:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/157-conjuntos-fregaderos-y-grifos> (referer: https://ziwwie.com/)
+2020-03-07 15:14:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/157-conjuntos-fregaderos-y-grifos>
+{'url': 'https://ziwwie.com/157-conjuntos-fregaderos-y-grifos'}
+2020-03-07 15:14:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/63-fregaderos-enrasados> (referer: https://ziwwie.com/)
+2020-03-07 15:14:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/63-fregaderos-enrasados>
+{'url': 'https://ziwwie.com/63-fregaderos-enrasados'}
+2020-03-07 15:14:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/65-fregaderos-especiales> (referer: https://ziwwie.com/)
+2020-03-07 15:14:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/65-fregaderos-especiales>
+{'url': 'https://ziwwie.com/65-fregaderos-especiales'}
+2020-03-07 15:14:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/64-fregaderos-sinteticos> (referer: https://ziwwie.com/)
+2020-03-07 15:14:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/64-fregaderos-sinteticos>
+{'url': 'https://ziwwie.com/64-fregaderos-sinteticos'}
+2020-03-07 15:14:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/68-grifos-cano-alto-extraible> (referer: https://ziwwie.com/)
+2020-03-07 15:14:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/68-grifos-cano-alto-extraible>
+{'url': 'https://ziwwie.com/68-grifos-cano-alto-extraible'}
+2020-03-07 15:14:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/10-coccion> (referer: https://ziwwie.com/)
+2020-03-07 15:14:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/10-coccion>
+{'url': 'https://ziwwie.com/10-coccion'}
+2020-03-07 15:14:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/164-gestion-de-residuos> (referer: https://ziwwie.com/)
+2020-03-07 15:14:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/164-gestion-de-residuos>
+{'url': 'https://ziwwie.com/164-gestion-de-residuos'}
+2020-03-07 15:14:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/22-lavasecadoras> (referer: https://ziwwie.com/)
+2020-03-07 15:14:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/22-lavasecadoras>
+{'url': 'https://ziwwie.com/22-lavasecadoras'}
+2020-03-07 15:14:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/62-fregaderos-bajo-encimera> (referer: https://ziwwie.com/)
+2020-03-07 15:14:35 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET https://ziwwie.com/carrito?action=show>
+2020-03-07 15:14:35 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET https://ziwwie.com/comparativa>
+2020-03-07 15:14:35 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET https://ziwwie.com/lista-de-deseos>
+2020-03-07 15:14:35 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET https://ziwwie.com/mi-cuenta>
+2020-03-07 15:14:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/62-fregaderos-bajo-encimera>
+{'url': 'https://ziwwie.com/62-fregaderos-bajo-encimera'}
+2020-03-07 15:14:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/21-lavadoras> (referer: https://ziwwie.com/)
+2020-03-07 15:14:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/21-lavadoras>
+{'url': 'https://ziwwie.com/21-lavadoras'}
+2020-03-07 15:14:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/130-lavavajillas> (referer: https://ziwwie.com/)
+2020-03-07 15:14:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/130-lavavajillas>
+{'url': 'https://ziwwie.com/130-lavavajillas'}
+2020-03-07 15:14:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/8-conservadores> (referer: https://ziwwie.com/)
+2020-03-07 15:14:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/8-conservadores>
+{'url': 'https://ziwwie.com/8-conservadores'}
+2020-03-07 15:14:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/150-lavar-secar> (referer: https://ziwwie.com/)
+2020-03-07 15:14:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/150-lavar-secar>
+{'url': 'https://ziwwie.com/150-lavar-secar'}
+2020-03-07 15:14:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/6-combis> (referer: https://ziwwie.com/)
+2020-03-07 15:14:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/6-combis>
+{'url': 'https://ziwwie.com/6-combis'}
+2020-03-07 15:14:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/7-congeladores> (referer: https://ziwwie.com/)
+2020-03-07 15:14:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/7-congeladores>
+{'url': 'https://ziwwie.com/7-congeladores'}
+2020-03-07 15:14:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/4-frio> (referer: https://ziwwie.com/)
+2020-03-07 15:14:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/4-frio>
+{'url': 'https://ziwwie.com/4-frio'}
+2020-03-07 15:14:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/23-secadoras> (referer: https://ziwwie.com/)
+2020-03-07 15:14:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/23-secadoras>
+{'url': 'https://ziwwie.com/23-secadoras'}
+2020-03-07 15:14:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/3-electrodomesticos> (referer: https://ziwwie.com/)
+2020-03-07 15:14:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/3-electrodomesticos>
+{'url': 'https://ziwwie.com/3-electrodomesticos'}
+2020-03-07 15:14:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/5-frigorificos> (referer: https://ziwwie.com/)
+2020-03-07 15:14:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/5-frigorificos>
+{'url': 'https://ziwwie.com/5-frigorificos'}
+2020-03-07 15:14:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/247-conjunto-congelador-y-conservador> (referer: https://ziwwie.com/)
+2020-03-07 15:14:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/247-conjunto-congelador-y-conservador>
+{'url': 'https://ziwwie.com/247-conjunto-congelador-y-conservador'}
+2020-03-07 15:14:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/33-placas> (referer: https://ziwwie.com/)
+2020-03-07 15:14:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/333-promociones> (referer: https://ziwwie.com/)
+2020-03-07 15:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/33-placas>
+{'url': 'https://ziwwie.com/33-placas'}
+2020-03-07 15:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/333-promociones>
+{'url': 'https://ziwwie.com/333-promociones'}
+2020-03-07 15:14:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/9-vinotecas> (referer: https://ziwwie.com/)
+2020-03-07 15:14:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/9-vinotecas>
+{'url': 'https://ziwwie.com/9-vinotecas'}
+2020-03-07 15:14:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/61-fregaderos-sobre-encimera> (referer: https://ziwwie.com/)
+2020-03-07 15:14:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/61-fregaderos-sobre-encimera>
+{'url': 'https://ziwwie.com/61-fregaderos-sobre-encimera'}
+2020-03-07 15:14:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/novedades> (referer: https://ziwwie.com/)
+2020-03-07 15:14:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ziwwie.com/> (referer: https://ziwwie.com/)
+2020-03-07 15:14:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/novedades>
+{'url': 'https://ziwwie.com/novedades'}
+2020-03-07 15:14:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ziwwie.com/>
+{'url': 'https://ziwwie.com/'}
+2020-03-07 15:14:54 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-03-07 15:14:54 [asyncio] DEBUG: Using selector: EpollSelector
+2020-03-07 15:14:54 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 4,
+ 'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 4,
+ 'downloader/request_bytes': 240481,
+ 'downloader/request_count': 318,
+ 'downloader/request_method_count/GET': 318,
+ 'downloader/response_bytes': 8856325,
+ 'downloader/response_count': 318,
+ 'downloader/response_status_count/200': 313,
+ 'downloader/response_status_count/301': 1,
+ 'downloader/response_status_count/403': 3,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 110.722884,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 3, 7, 15, 14, 54, 54184),
+ 'item_scraped_count': 311,
+ 'log_count/DEBUG': 638,
+ 'log_count/INFO': 11,
+ 'memusage/max': 108707840,
+ 'memusage/startup': 82882560,
+ 'offsite/domains': 4,
+ 'offsite/filtered': 4,
+ 'request_depth_max': 1,
+ 'response_received_count': 317,
+ 'robotstxt/forbidden': 4,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 321,
+ 'scheduler/dequeued/memory': 321,
+ 'scheduler/enqueued': 321,
+ 'scheduler/enqueued/memory': 321,
+ 'start_time': datetime.datetime(2020, 3, 7, 15, 13, 3, 331300)}
+2020-03-07 15:14:54 [scrapy.core.engine] INFO: Spider closed (finished)
