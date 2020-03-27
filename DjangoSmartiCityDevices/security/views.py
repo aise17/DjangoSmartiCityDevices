@@ -3,6 +3,7 @@ from pprint import pformat
 
 from django.contrib.auth import authenticate
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import login as do_login
@@ -10,7 +11,19 @@ from django.contrib.auth import logout as do_logout
 from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
-from django.shortcuts import HttpResponse
+
+from django.contrib.auth.models import User, Group
+from django.contrib import admin
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
+from .serializers import UserSerializer, GroupSerializer, UserLoginSerializer
+
+admin.autodiscover()
+from rest_framework import generics, permissions, serializers, views, status
+from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope, TokenHasScope
+from rest_framework.decorators import permission_classes
 
 from .tasks import celery_task
 
@@ -74,3 +87,48 @@ def worker_list(request):
     from celery.events import EventReceiver
 
     return JsonResponse(data , safe=False)
+
+@permission_classes([AllowAny])
+class LoginApi(generics.ListCreateAPIView):
+
+    serializer_class = UserLoginSerializer
+
+    def post(self, request, *args, **kwargs):
+
+        serializer = UserLoginSerializer(data=request.data)
+
+        if serializer.is_valid():
+
+            salida = dict()
+
+            user = authenticate(username=serializer['username'].value, password=serializer['password'].value)
+            if user:
+                login(request)
+                ser = UserSerializer(instance=user)
+
+                salida['ok'] = True
+                salida['datos'] = ser.data
+            else:
+                salida['ok'] = False
+                salida['error'] = 'fallo en la autentificacion'
+
+            return JsonResponse(salida, status=status.HTTP_200_OK)
+
+
+
+# Create the API views
+class UserList(generics.ListCreateAPIView):
+    permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class UserDetails(generics.RetrieveAPIView):
+    permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class GroupList(generics.ListAPIView):
+    permission_classes = [permissions.IsAuthenticated, TokenHasScope]
+    required_scopes = ['groups']
+    queryset = Group.objects.all()
+    serializer_class = GroupSerializer

@@ -41,7 +41,7 @@ class ScrapyTasks(models.Model):
     id = models.UUIDField(primary_key=True)
     create_datetime = models.DateTimeField(auto_now=True)
     finish_datetime = models.DateTimeField(auto_now=False, null=True)
-    type = models.CharField(choices=TASKTYPE, max_length=255, null=True)
+    task_type = models.CharField(choices=TASKTYPE, max_length=255, null=True)
     status = models.CharField(choices=TASKSTATUS, max_length=255, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     company = models.ForeignKey(Company, on_delete=models.CASCADE)

@@ -16,13 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from .views import index, worker_list, login, register, logout
+from .views import index, worker_list, login, register, logout, UserList, UserDetails, GroupList, LoginApi
 
 urlpatterns = [
     path('', index),
     path('login/', login, name='login'),
+    path('loginApi/', LoginApi.as_view(), name='loginApi'),
     path('logout/', logout, name='logout'),
     path('register/', register, name='register'),
     path('works/', worker_list),
+    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+    path('users/', UserList.as_view()),
+    path('users/<pk>/', UserDetails.as_view()),
+    path('groups/', GroupList.as_view()),
 
 ]

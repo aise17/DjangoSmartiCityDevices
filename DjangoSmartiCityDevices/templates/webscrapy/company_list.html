@@ -4,9 +4,22 @@
 
 
 {% block content %}
+
+
+<style>
+.tableFixHead          { overflow-y: auto; height: 600px; }
+.tableFixHead thead th { position: sticky; top: 0; }
+
+/* Just common table stuff. Really. */
+table  { border-collapse: collapse; width: 100%; }
+th, td { padding: 8px 16px; }
+th     { background:#eee;
+</style>
+
+
 <div class="tableFixHead">
 
-<table class="table table-scroll">
+<table id="myTable" class="table table-hover">
   <thead class="thead-light">
     <tr>
       <th scope="col">#</th>
@@ -29,4 +42,11 @@
   </tbody>
 </table>
   </div>
+
+
+<script>
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
 {% endblock %}
