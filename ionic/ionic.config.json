@@ -1,5 +1,7 @@
 {
-  "name": "ionic",
-  "integrations": {},
-  "type": "angular"
+  "name": "ionic-conference-app",
+  "type": "angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

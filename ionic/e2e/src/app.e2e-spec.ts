@@ -6,12 +6,19 @@ describe('new App', () => {
   beforeEach(() => {
     page = new AppPage();
   });
-  describe('default screen', () => {
-    beforeEach(() => {
-      page.navigateTo('/Inbox');
-    });
-    it('should say Inbox', () => {
-      expect(page.getParagraphText()).toContain('Inbox');
-    });
+
+  it('should display the menu', () => {
+    page.navigateTo();
+    expect(page.getMenu()).toBeTruthy();
+  });
+
+  it('should get the slides text', () => {
+    page.navigateTo();
+    expect(page.getFirstSlide()).toBe('ion-slide');
+  });
+
+  it('should create a router outlet', () => {
+    page.navigateTo();
+    expect(page.getRouter()).toBeTruthy();
   });
 });

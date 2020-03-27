@@ -1,0 +1,24 @@
+
+
+
+  <div class="file-input-container ion-padding">
+    <label>
+      <input type="file" ng2FileSelect [uploader]="uploader" />
+      Add Files
+    </label>
+  </div>
+
+
+  <form onsubmit="processForm(event)">
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="stacked">Url <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit" class="ion-no-margin">Add Company</ion-button>
+    </div>
+  </form>

@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons *ngIf="!showSearchbar" slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>companys</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<app-multi-file-upload></app-multi-file-upload>
+
+<app-table-companys></app-table-companys>
+
+</ion-content>
