@@ -116,6 +116,8 @@ class LoginApi(generics.ListCreateAPIView):
 
 
 
+
+
 # Create the API views
 class UserList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
